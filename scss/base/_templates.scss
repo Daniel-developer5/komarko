@@ -1,0 +1,92 @@
+%container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.container {
+  @extend %container;
+
+  &.xl {
+    max-width: 1920px;
+  }
+}
+
+%vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+%horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+%full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%text-button {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  text-transform: uppercase
+}
+
+%text-h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 108px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+%text-h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 64px;
+  color: $color-black;
+}
+
+%text-h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+  color: $color-white;
+}
+
+%text-h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.blue-text {
+  color: $color-blue;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.underlined-text {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+}
+
+.shape-paralax-item {
+  will-change: transform;
+}

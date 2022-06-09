@@ -1,0 +1,70 @@
+.navigation {
+  padding: 32px 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+
+  .container {
+    &, .logo {
+      @extend %vertical-center;
+    }
+
+    .logo {
+      margin-right: 95px;
+
+      .text {
+        max-width: 86px;
+        margin-left: 15px;
+        font-family: 'Rajdhani', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 17px;
+        color: $color-white;
+        text-transform: uppercase;
+      }
+    }
+
+    .navigation-links {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 42px;
+      margin-right: 100px;
+
+      .navigation-link {
+        display: flex;
+
+        a {
+          @extend %text-button;
+          @extend %vertical-center;
+        }
+      }
+    }
+
+    .additional-buttons {
+      @extend %vertical-center;
+
+      .search-btn {
+        @extend %full-center;
+        margin-right: 16px;
+        padding: 0;
+        width: 44px;
+        height: 44px;
+      }
+
+      .login-btn {
+        margin-right: 24px;
+      }
+
+      .lang-btn {
+        margin-right: 28px;
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    }
+  }
+}

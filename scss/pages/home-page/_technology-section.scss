@@ -1,0 +1,165 @@
+.technology-section {
+  padding: 55px 102px 130px;
+  position: relative;
+  overflow: hidden;
+
+  .shape-paralax-item {
+    position: absolute;
+    left: -160px;
+    top: 30%;
+    width: 325px;
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 1716px;
+
+    .title-box {
+      margin-left: 268px;
+
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 4px;
+        color: $color-blue;
+      }
+
+      .title {
+        @extend %text-h2;
+        margin-bottom: 15px;
+      }
+
+      .buttons {
+        display: flex;
+
+        button:first-child {
+          margin-right: 18px;
+        }
+      }
+    }
+
+    .technology-slider-wrapper {
+      position: relative;
+      margin-top: 108px;
+      padding: 0 96px;
+      display: flex;
+      justify-content: center;
+
+      .active-slide-border {
+        position: absolute;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        border: 4px solid $color-purple;
+        border-radius: 20px;
+
+        &:after {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='19' viewBox='0 0 27 19'%3E%3Cpath id='Polygon_7' data-name='Polygon 7' d='M13.5,0,27,19H0Z' transform='translate(27 19) rotate(180)' fill='%23c959a3'/%3E%3C/svg%3E%0A");
+          position: absolute;
+          bottom: -24px;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        top: 0;
+        bottom: 72px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        
+        svg {
+          cursor: pointer;
+
+          &:hover {
+            path:last-child {
+              fill: $color-black;
+            }
+          }
+
+          path:last-child {
+            transition: ease 0.3s;
+          }
+        }
+
+        &.arrow-left {
+          margin-right: 30px;
+          left: 0;
+        }
+
+        &.arrow-right {
+          transform: rotate(180deg);
+          margin-left: 30px;
+          right: 0;
+        }
+      }
+    }
+
+    .technology-slider {
+      .slide {
+        min-height: 630px;
+        margin-right: 48px;
+
+        &.swiper-slide-next {
+          .slide-content .slide-text {
+            color: $color-purple
+          }
+        }
+
+        &.slide-1 .img-box {
+          background-image: url('../images/tech-slider/slide-1.jpg');
+        }
+  
+        &.slide-2 .img-box {
+          background-image: url('../images/tech-slider/slide-2.jpg');
+        }
+  
+        &.slide-3 .img-box {
+          background-image: url('../images/tech-slider/slide-3.jpg');
+        }
+  
+        &.slide-4 .img-box {
+          background-image: url('../images/tech-slider/slide-2.jpg');
+        }
+
+        .slide-content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: ease 0.5s;
+
+          .img-box {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: 0 50%;
+            overflow: hidden;
+            transition: clip-path ease 0.5s;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: none;
+            }
+          }
+
+          .slide-text {
+            margin-top: 42px;
+            display: block;
+            font-family: 'Rajdhani', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 31px;
+            color: $color-black;
+            transition: ease 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

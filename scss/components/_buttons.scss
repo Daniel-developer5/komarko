@@ -1,0 +1,22 @@
+.button {
+  @extend %horizontal-center;
+  @extend %text-button;
+  padding: 12px 32px;
+  color: $color-white;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &.button-white {
+    border: 2px solid rgba($color: $color-white, $alpha: 0.4);
+  }
+
+  &.button-blue {
+    background-color: $color-blue;
+  }
+
+  &.button-gray {
+    border: 3px solid $color-secondary-gray;
+    color: rgba($color: $color-black, $alpha: 0.5);
+  }
+}

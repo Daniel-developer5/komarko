@@ -1,0 +1,30 @@
+.introduction-section {
+  background-image: url('../images/bg/home-intro-bg.jpg');
+
+  .overlay {
+    background-color: rgba($color: $color-blue, $alpha: 0.9);
+  }
+
+  .container {
+    padding-top: 174px;
+    padding-bottom: 210px;
+
+    .text-box {
+      max-width: 544px;
+
+      .title {
+        @extend %text-h3;
+        margin-bottom: 24px;
+      }
+  
+      .text {
+        font-family: 'Rajdhani', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-white;
+      }
+    }
+  }
+}
