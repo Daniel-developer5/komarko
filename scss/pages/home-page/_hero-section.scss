@@ -5,6 +5,10 @@
   background-attachment: fixed;
   min-height: 100vh;
 
+  @media (max-width: $breakpoint-tablet) {
+    background-size: cover;
+  }
+
   .overlay {
     min-height: 100vh;
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -18,8 +22,24 @@
     padding: 15% 118px 64px;
     min-height: 100vh;
 
+    @media (max-width: $breakpoint-tablet) {
+      padding: 32px 16px;
+    }
+
+    .text-wrapper {
+      @media (max-width: $breakpoint-laptop) {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+    }
+
     .text {
       margin-left: 10%;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-left: 0;
+      }
 
       .title {
         @extend %text-h1;
@@ -36,6 +56,10 @@
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @media (max-width: $breakpoint-tablet) {
+          display: none;
+        }
       }
 
       .slider-dots {

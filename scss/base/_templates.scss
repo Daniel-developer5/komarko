@@ -34,7 +34,12 @@
   font-size: 16px;
   line-height: 20px;
   color: $color-white;
-  text-transform: uppercase
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 %text-h1 {
@@ -45,6 +50,16 @@
   line-height: 108px;
   text-transform: uppercase;
   color: $color-white;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: 64px;
+    line-height: 95px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 42px;
+    line-height: 110%;
+  }
 }
 
 %text-h2 {
@@ -54,6 +69,11 @@
   font-size: 50px;
   line-height: 64px;
   color: $color-black;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 36px;
+    line-height: 110%;   
+  }
 }
 
 %text-h3 {
@@ -71,6 +91,27 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: 18px;
+    line-height: 110%;
+  }
+}
+
+%text-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+%text-body-small {
+  font-family: 'Rajdhani', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
 }
 
 .blue-text {

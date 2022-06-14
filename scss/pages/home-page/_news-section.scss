@@ -1,12 +1,10 @@
 .news-section {
   .container {
     display: flex;
-    overflow: hidden;
 
     .section-img-box {
       max-width: 700px;
       position: relative;
-      overflow: hidden;
 
       @media (max-width: $breakpoint-desktop) {
         max-width: 300px;
@@ -48,9 +46,13 @@
       flex-grow: 1;
       background-color: $color-secondary-sky;
 
+      @media (max-width: $breakpoint-laptop) {
+        padding-right: 64px;
+        padding-left: 64px;
+      }
+
       @media (max-width: $breakpoint-tablet) {
-        padding-top: 36px;
-        padding-bottom: 36px;
+        padding: 40px 16px;
       }
 
       .inner-wrap {
@@ -130,12 +132,8 @@
             }
   
             .text {
+              @extend %text-body-small;
               max-width: 300px;
-              font-family: 'Rajdhani', sans-serif;
-              font-style: normal;
-              font-weight: 400;
-              font-size: 15px;
-              line-height: 19px;
               color: $color-black;
 
               @media (max-width: $breakpoint-tablet) {

@@ -3,6 +3,15 @@
   position: relative;
   overflow: hidden;
 
+  @media (max-width: $breakpoint-desktop) {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
   .shape-paralax-item {
     position: absolute;
     left: -160px;
@@ -16,6 +25,10 @@
 
     .title-box {
       margin-left: 268px;
+
+      @media (max-width: $breakpoint-desktop) {
+        margin-left: 0;
+      }
 
       .eyebrow {
         @extend %text-button;
@@ -32,8 +45,17 @@
       .buttons {
         display: flex;
 
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column;
+        }
+
         button:first-child {
           margin-right: 18px;
+
+          @media (max-width: $breakpoint-tablet) {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
         }
       }
     }
@@ -45,6 +67,15 @@
       display: flex;
       justify-content: center;
 
+      @media (max-width: $breakpoint-laptop) {
+        justify-content: flex-start;
+        padding: 0 60px;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-top: 32px;
+      }
+
       .active-slide-border {
         position: absolute;
         height: 100%;
@@ -54,6 +85,10 @@
         border: 4px solid $color-purple;
         border-radius: 20px;
 
+        @media (max-width: $breakpoint-laptop) {
+          left: 50px;
+        }
+
         &:after {
           content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='19' viewBox='0 0 27 19'%3E%3Cpath id='Polygon_7' data-name='Polygon 7' d='M13.5,0,27,19H0Z' transform='translate(27 19) rotate(180)' fill='%23c959a3'/%3E%3C/svg%3E%0A");
           position: absolute;
@@ -62,37 +97,7 @@
       }
 
       .arrow {
-        position: absolute;
-        top: 0;
-        bottom: 72px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        
-        svg {
-          cursor: pointer;
-
-          &:hover {
-            path:last-child {
-              fill: $color-black;
-            }
-          }
-
-          path:last-child {
-            transition: ease 0.3s;
-          }
-        }
-
-        &.arrow-left {
-          margin-right: 30px;
-          left: 0;
-        }
-
-        &.arrow-right {
-          transform: rotate(180deg);
-          margin-left: 30px;
-          right: 0;
-        }
+        @include slider-triangle-arrow();
       }
     }
 
@@ -103,7 +108,19 @@
 
         &.swiper-slide-next {
           .slide-content .slide-text {
-            color: $color-purple
+            color: $color-purple;
+
+            .slide-content .slide-text {
+              color: $color-black;
+            }
+          }
+        }
+
+        &.swiper-slide-active {
+          @media (max-width: $breakpoint-tablet) {
+            .slide-content .slide-text {
+              color: $color-purple;
+            }
           }
         }
 
@@ -148,14 +165,11 @@
           }
 
           .slide-text {
+            @extend %text-h4;
             margin-top: 42px;
             display: block;
-            font-family: 'Rajdhani', sans-serif;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 31px;
             color: $color-black;
+            text-align: center;
             transition: ease 0.5s;
           }
         }
