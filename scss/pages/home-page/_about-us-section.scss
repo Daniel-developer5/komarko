@@ -1,0 +1,145 @@
+.about-us-section {
+  @include section-pseudo-tab();
+  padding: 70px 64px 330px;
+  position: relative;
+  background-color: $color-secondary-dark-blue;
+
+  .shape-paralax-item {
+    position: absolute;
+    left: -160px;
+    top: 40%;
+    width: 325px;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    .section-description-block {
+      max-width: 380px;
+
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 6px;
+        color: $color-secondary-light-blue;
+      }
+
+      .title {
+        @extend %text-h4;
+        margin-bottom: 24px;
+        color: $color-white;
+      }
+
+      .text {
+        @extend %text-body-small;
+        margin-bottom: 24px;
+        color: $color-white;
+      }
+
+      .link {
+        @extend %text-body-small;
+        font-weight: 700;
+        color: $color-white;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+
+      .line {
+        display: block;
+        max-width: 93px;
+        border-bottom: 1px solid $color-secondary-light-blue;
+      }
+    }
+
+    .title-box {
+      max-width: 360px;
+
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 4px;
+        color: $color-white;
+      }
+
+      .title {
+        @extend %text-h2;
+        color: $color-white;
+      }
+
+      .text {
+        @extend %text-subtitle;
+        color: $color-white;
+      }
+    }
+
+    .date-block {
+      @extend %vertical-center;
+      justify-content: flex-end;
+      margin-top: 150px;
+
+      .date {
+        margin-right: 72px;
+        font-family: 'Rajdhani', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 226px;
+        line-height: 288px;
+        color: $color-white;
+      }
+    }
+    
+    .about-us-image-block {
+      @extend %vertical-center;
+      margin-top: 120px;
+
+      &.img-last {
+        justify-content: flex-end;
+
+        .img-box {
+          margin-right: 0;
+          margin-left: 120px;
+        }
+      }
+
+      .img-box {
+        margin-right: 120px;
+        position: relative;
+
+        &.top-shadow {
+          &:before {
+            top: -5%;
+            right: -15%;
+            left: auto;
+          }
+        }
+
+        .img-border {
+          border-radius: 25px;
+          overflow: hidden;
+          position: relative;
+          z-index: 2;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          width: 50%;
+          height: 70%;
+          bottom: 0;
+          left: -15%;
+          border-radius: 25px;
+          background-color: $color-blue;
+        }
+      }
+
+      .section-description-block {
+        .text {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

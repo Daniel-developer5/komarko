@@ -1,0 +1,55 @@
+.career-section {
+  @include section-pseudo-tab(0 0 40px 0, 0);
+  background-image: url('../images/home-page/career-img.jpg');
+  background-size: cover;
+
+  .overlay {
+    padding: 240px 64px 290px;
+    background-color: rgba($color: #000, $alpha: 0.3);
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 40px 16px;
+    }
+  }
+  
+  .container {
+    .title-box {
+      max-width: 514px;
+
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 18px;
+        color: $color-white;
+      }
+
+      .title {
+        @extend %text-h2;
+        margin-bottom: 18px;
+        color: $color-white;
+      }
+
+      .text {
+        @extend %text-body-small;
+        margin-bottom: 24px;
+        color: $color-white;
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  .pseudo-tab {
+    @include section-pseudo-tab(40px 0 0 0, auto, transparent);
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+
+    &:after {
+      border-bottom: 0;
+    }
+  }
+}

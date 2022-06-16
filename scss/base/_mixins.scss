@@ -35,3 +35,25 @@
     right: 0;
   }
 }
+
+@mixin section-pseudo-tab($border-radius: 0 0 0 40px, $left: auto, $fill: $color-blue) {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: $left;
+    width: 30%;
+    height: 40px;
+    border-radius: $border-radius;
+    background-color: $color-blue;
+    border: 3px solid $color-blue;
+    background-color: $fill;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+}
