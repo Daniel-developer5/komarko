@@ -36,11 +36,11 @@
   }
 }
 
-@mixin section-pseudo-tab($border-radius: 0 0 0 40px, $left: auto, $fill: $color-blue) {
+@mixin section-animated-tab($border-radius: 0 0 0 40px, $left: auto, $fill: $color-blue, $translate: 100%) {
   position: relative;
+  overflow: hidden;
 
-  &:after {
-    content: '';
+  .animated-tab {
     position: absolute;
     top: 0;
     right: 0;
@@ -51,9 +51,28 @@
     background-color: $color-blue;
     border: 3px solid $color-blue;
     background-color: $fill;
+    transform: translateX($translate);
+    transition: ease 0.5s;
+
+    &.animated {
+      transform: translateX(0);
+    }
 
     @media (max-width: $breakpoint-tablet) {
       display: none;
     }
+  }
+}
+
+@mixin shape-paralax-pentagon($top: 30%, $bottom: auto) {
+  position: absolute;
+  left: -160px;
+  top: $top;
+  bottom: $bottom;
+  width: 325px;
+  z-index: 0;
+
+  @media (max-width: $breakpoint-desktop) {
+    opacity: 0.5;
   }
 }

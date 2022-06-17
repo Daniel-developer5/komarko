@@ -1,0 +1,25 @@
+.offers-section {
+  position: relative;
+  padding: 58px 64px 113px;
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    .title-box {
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 4px;
+        color: $color-blue;
+      }
+
+      .title {
+        @extend %text-h2;
+        margin-bottom: 58px;
+        color: $color-black;
+      }
+    }
+  }
+}

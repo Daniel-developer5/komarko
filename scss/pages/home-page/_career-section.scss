@@ -1,5 +1,5 @@
 .career-section {
-  @include section-pseudo-tab(0 0 40px 0, 0);
+  @include section-animated-tab(0 0 40px 0, 0, $color-blue, -100%);
   background-image: url('../images/home-page/career-img.jpg');
   background-size: cover;
 
@@ -42,7 +42,7 @@
   }
 
   .pseudo-tab {
-    @include section-pseudo-tab(40px 0 0 0, auto, transparent);
+    @include section-animated-tab(40px 0 0 0, auto, transparent);
     position: absolute;
     right: 0;
     bottom: 40px;

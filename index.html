@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>Komarko</title>
 </head>
 <body>
@@ -68,7 +69,7 @@
   <section class="home-page-hero">
     <div class="overlay">
       <div class="container xl">
-        <div class="text-wrapper">
+        <div class="text-wrapper slide-up">
           <div class="text">
             <h1 class="title">
               produkcja <span class="blue-text text-bold">kontraktowa</span> suplementów diety
@@ -94,7 +95,7 @@
   <section id="introduction-section" class="introduction-section">
     <div class="overlay">
       <div class="container">
-        <div class="text-box">
+        <div class="text-box slide-up">
           <h3 class="title">
             KOMARKO tworzy <br><span class="text-bold underlined-text">przyjazne środowisko</span> do produkcji kontraktowej <span class="text-bold underlined-text">suplementów diety.</span>
           </h3>
@@ -110,7 +111,7 @@
       <img src="./images/icons/pentagon.svg" alt="">
     </div>
     <div class="container">
-      <div class="title-box">
+      <div class="title-box slide-up">
         <span class="eyebrow">R & D</span>
         <h2 class="title">Rozwój i technologia.</h2>
         <div class="buttons">
@@ -169,14 +170,14 @@
   </section>
   <section class="news-section">
     <div class="container xl">
-      <div class="section-img-box">
+      <div class="section-img-box slide-up">
         <img src="./images/home-page/news-big-image.png" alt="">
       </div>
       <div class="news-list-wrapper">
         <div class="inner-wrap">
-          <h2 class="title">Aktualności</h2>
+          <h2 class="title slide-up">Aktualności</h2>
           <ul class="news-list">
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -190,7 +191,7 @@
                 </div>
               </a>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -204,7 +205,7 @@
                 </div>
               </a>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -218,7 +219,7 @@
                 </div>
               </a>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -232,7 +233,7 @@
                 </div>
               </a>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -246,7 +247,7 @@
                 </div>
               </a>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item slide-up">
               <a href="#" class="link">
                 <div class="news-img-box">
                   <img src="./images/home-page/news-1.png" alt="">
@@ -270,7 +271,7 @@
       <img src="./images/icons/pentagon.svg" alt="">
     </div>
     <div class="container">
-      <div class="title-box">
+      <div class="title-box slide-up">
         <span class="eyebrow">Usługi</span>
         <h2 class="title">Innowacyjne technologie.</h2>
         <p class="text">Gwarantują najwyższą jakość</p>
@@ -451,7 +452,7 @@
             </svg>
           </div>
         </div>
-        <div class="slider-descriptions">
+        <div class="slider-descriptions slide-up">
           <div class="slider-text-box active">
             <span class="title">Proszki</span>
             <p class="text">
@@ -506,16 +507,23 @@
     </div>
   </section>
   <section class="about-us-section">
+    <div class="encircled-border-animation">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <div class="animated-tab"></div>
     <div class="shape-paralax-item">
       <img src="./images/icons/pentagon-white.svg" alt="">
     </div>
     <div class="container">
       <div class="title-box">
-        <span class="eyebrow">O nas</span>
-        <h2 class="title">Komarko.</h2>
-        <p class="text">Produkcja kontraktowa suplementów diety</p>
+        <div class="slide-up">
+          <span class="eyebrow">O nas</span>
+          <h2 class="title">Komarko.</h2>
+          <p class="text">Produkcja kontraktowa suplementów diety</p>
+        </div>
       </div>
-      <div class="date-block">
+      <div class="date-block slide-up">
         <div class="date">1990</div>
         <div class="section-description-block">
           <span class="eyebrow">Historia</span>
@@ -527,30 +535,34 @@
         </div>
       </div>
       <div class="about-us-image-block">
-        <div class="img-box">
+        <div class="img-box slide-up">
           <div class="img-border">
             <img src="./images/home-page/about-us-1.png" alt="About Us">
           </div>
         </div>
         <div class="section-description-block">
-          <span class="eyebrow">Misja</span>
-          <h4 class="title">Optymalne miejsce do produkcji kontraktowej</h4>
-          <p class="text">
-            Naszą misją jest stworzenie optymalnego miejsca do produkcji kontraktowej suplementów diety, gdzie kupujący dokonują transakcji w bezpieczny i wygodny sposób.
-          </p>
-          <span class="line"></span>
+          <div class="box slide-up">
+            <span class="eyebrow">Misja</span>
+            <h4 class="title">Optymalne miejsce do produkcji kontraktowej</h4>
+            <p class="text">
+              Naszą misją jest stworzenie optymalnego miejsca do produkcji kontraktowej suplementów diety, gdzie kupujący dokonują transakcji w bezpieczny i wygodny sposób.
+            </p>
+            <span class="line"></span>
+          </div>
         </div>
       </div>
       <div class="about-us-image-block img-last">
         <div class="section-description-block">
-          <span class="eyebrow">Cel</span>
-          <h4 class="title">Dedykowana platforma</h4>
-          <p class="text">
-            Chcemy oferować dedykowaną platformę o najwyższej jakości, wiarygodności i wygodzie użytkowania.
-          </p>
-          <span class="line"></span>
+          <div class="box slide-up">
+            <span class="eyebrow">Cel</span>
+            <h4 class="title">Dedykowana platforma</h4>
+            <p class="text">
+              Chcemy oferować dedykowaną platformę o najwyższej jakości, wiarygodności i wygodzie użytkowania.
+            </p>
+            <span class="line"></span>
+          </div>
         </div>
-        <div class="img-box top-shadow">
+        <div class="img-box top-shadow slide-up">
           <div class="img-border">
             <img src="./images/home-page/about-us-2.png" alt="About Us">
           </div>
@@ -558,22 +570,56 @@
       </div>
     </div>
   </section>
+  <!-- <section class="offers-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+      <div class="offers-slider swiper">
+        <div class="swipper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-box"></div>
+            <span class="capture">Chusteczka odświeżająca</span>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-box"></div>
+            <span class="capture">Chusteczka czyszcząco-odtłuczająca</span>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-box"></div>
+            <span class="capture">Chusteczka antybakteryjna</span>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-box"></div>
+            <span class="capture">Lorem Ipsum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title-box">
+        <span class="eyebrow">oferta</span>
+        <h2 class="title">Zgodnie z wymaganiami GMP. </h2>
+      </div>
+    </div>
+  </section> -->
   <section class="career-section">
+    <div class="animated-tab"></div>
     <div class="overlay">
       <div class="container">
-        <div class="title-box">
+        <div class="title-box slide-up">
           <span class="eyebrow">kariera</span>
-          <h2 class="title">Zostań częścią naszego wspólnego sukcesu!</h2>
+          <h2 class="title">Zostań <span class="text-bold underlined-text">częścią naszego</span> wspólnego <span class="text-bold">sukcesu!</span></h2>
           <p class="text">
             Jeżeli zależy Ci by pracować w szybko rozwijającej się firmie, z polskim kapitałem, jesteś zaangażowany, kreatywny, nie boisz się wyzwań i chciałbyś zostać cześcią naszego zespołu, wyślij nam swoją aplikację.
           </p>
           <a href="#" class="button button-blue">kariera</a>
         </div>
       </div>
-      <div class="pseudo-tab"></div>
+      <div class="pseudo-tab">
+        <div class="animated-tab"></div>
+      </div>
     </div>
   </section>
-  <footer class="footer">
+  <footer class="footer page-footer">
     <div class="container">
       <div class="footer-heading">
         <div class="logo">
@@ -587,23 +633,23 @@
       <div class="footer-information">
         <div class="links">
           <ul class="links-list">
-            <li class="link"><a href="#">O nas</a></li>
+            <li class="link title margin-bottom">O nas</li>
             <li class="link"><a href="#">Historia</a></li>
             <li class="link"><a href="#">Misja </a></li>
-            <li class="link"><a href="#">Cele</a></li>
-            <li class="link"><a href="#">Jakośc</a></li>
-            <li class="link"><a href="#">Oferta</a></li>
-            <li class="link"><a href="#">Aktualności</a></li>
-            <li class="link"><a href="#">Kariera</a></li>
+            <li class="link margin-bottom"><a href="#">Cele</a></li>
+            <li class="link title"><a href="#">Jakośc</a></li>
+            <li class="link title"><a href="#">Oferta</a></li>
+            <li class="link title"><a href="#">Aktualności</a></li>
+            <li class="link title"><a href="#">Kariera</a></li>
           </ul>
           <ul class="links-list">
-            <li class="link"><a href="#">R & D</a></li>
-            <li class="link"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
             <li class="link"><a href="#">Projekty Badawcze</a></li>
             <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
             <li class="link"><a href="#">Kadra Naukowa</a></li>
-            <li class="link"><a href="#">Osiągniecia</a></li>
-            <li class="link"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
             <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
             <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
             <li class="link"><a href="#">Cykle Życia Produktu</a></li>
@@ -611,7 +657,7 @@
             <li class="link"><a href="#">Działki</a></li>
           </ul>
           <ul class="links-list">
-            <li class="link"><a href="#">Usługi</a></li>
+            <li class="link title margin-bottom">Usługi</li>
             <li class="link"><a href="#">Proszk</a></li>
             <li class="link"><a href="#">Granulaty</a></li>
             <li class="link"><a href="#">Mikrogranulaty</a></li>
@@ -622,7 +668,7 @@
           </ul>
         </div>
         <div class="contacts">
-          <span class="eyebrow">Kontakt</span>
+          <span class="link title margin-bottom">Kontakt</span>
           <p class="text">
             KOMARKO Sp. z o.o.
             05-850 Ożarów Mazowiecki
@@ -660,6 +706,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/main.js"></script>
   <script src="./js/homePage.js"></script>
   <script src="./js/shapeParalax.js"></script>
 </body>

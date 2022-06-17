@@ -14,11 +14,7 @@
   }
 
   .shape-paralax-item {
-    position: absolute;
-    left: -160px;
-    bottom: 0;
-    width: 325px;
-    z-index: -1;
+    @include shape-paralax-pentagon(auto, 0);
   }
 
   .container {
@@ -95,6 +91,10 @@
             }
           }
 
+          &.animated:before {
+            animation: border 2s linear forwards;
+          }
+
           &:before {
             content: '';
             position: absolute;
@@ -104,7 +104,6 @@
             width: 100vw;
             height: 110%;
             background-color: #fff;
-            animation: border 3s linear forwards;
           }
 
           @keyframes border {
@@ -148,6 +147,14 @@
       .item {
         position: relative;
         z-index: 3;
+        transition: ease 0.5s;
+        opacity: 0;
+        transform: scale(0);
+
+        &.animated {
+          opacity: 1;
+          transform: scale(1);
+        }
 
         &.active {
           .icon {
