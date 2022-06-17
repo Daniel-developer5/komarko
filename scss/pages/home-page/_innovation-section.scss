@@ -144,6 +144,15 @@
         padding-bottom: 0;
       }
 
+      &.animated {
+        @media (max-width: $breakpoint-tablet) {
+          .item {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+
       .item {
         position: relative;
         z-index: 3;
