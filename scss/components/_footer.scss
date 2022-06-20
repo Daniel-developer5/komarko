@@ -110,3 +110,14 @@
     }
   }
 }
+
+.post-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 860px;
+  }
+}

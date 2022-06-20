@@ -92,7 +92,7 @@
           }
 
           &.animated:before {
-            animation: border 2s linear forwards;
+            animation: border-slide-down 2s linear forwards;
           }
 
           &:before {
@@ -104,21 +104,6 @@
             width: 100vw;
             height: 110%;
             background-color: #fff;
-          }
-
-          @keyframes border {
-            0% {
-              width: 100vw;
-              height: 110%;
-            }
-            80% {
-              width: 40px;
-              height: 110%;
-            }
-            100% {
-              width: 40px;
-              height: 0;
-            }
           }
         }
       }

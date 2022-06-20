@@ -8,3 +8,36 @@
     opacity: 1;
   }
 }
+
+@keyframes border-slide-down {
+  0% {
+    width: 100vw;
+    height: 110%;
+  }
+  80% {
+    width: 40px;
+    height: 110%;
+  }
+  100% {
+    width: 40px;
+    height: 0;
+  }
+}
+
+@keyframes border-slide-up {
+  0% {
+    width: 100vw;
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+  80% {
+    width: 40px;
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+  100% {
+    width: 40px;
+    transform: scaleY(0);
+    transform-origin: top center;
+  }
+}

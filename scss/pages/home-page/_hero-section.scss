@@ -1,15 +1,42 @@
 .home-page-hero {
-  background-image: url('../images/bg/main-page-hero.jpg');
-  background-size: 100%;
-  background-position: center center;
-  background-attachment: fixed;
   min-height: 100vh;
+  position: relative;
 
   @media (max-width: $breakpoint-tablet) {
     background-size: cover;
   }
 
+  .hero-section-slider-wrapper {
+    @include full-absolute-bleed();
+    z-index: 1;
+    height: 100vh;
+  }
+
+  .hero-section-slider {
+    height: 100vh;
+
+    .swiper-slide {
+      background-size: 100%;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    .slide-1 {
+      background-image: url('../images/bg/main-page-hero.jpg');
+    }
+
+    .slide-2 {
+      background-image: url('../images/bg/main-page-hero-2.jpg');
+    }
+
+    .slide-3 {
+      background-image: url('../images/bg/main-page-hero-3.jpg');
+    }
+  }
+
   .overlay {
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
     background-color: rgba($color: #000000, $alpha: 0.5);
   }
@@ -66,15 +93,19 @@
         display: grid;
         grid-auto-flow: column;
         gap: 8px;
+        width: auto;
 
-        .dot {
+        .swiper-pagination-bullet {
           width: 36px;
           height: 16px;
+          margin: 0;
           border: 3px solid $color-blue;
           border-radius: 20px;
           cursor: pointer;
+          background: none;
+          opacity: 1;
 
-          &.active {
+          &-active {
             border-color: transparent;
             background-color: $color-purple;
           }

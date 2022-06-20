@@ -67,6 +67,15 @@
     </div>
   </header>
   <section class="home-page-hero">
+    <div class="hero-section-slider-wrapper">
+      <div class="hero-section-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1"></div>
+          <div class="swiper-slide slide-2"></div>
+          <div class="swiper-slide slide-3"></div>
+        </div>
+      </div>
+    </div>
     <div class="overlay">
       <div class="container xl">
         <div class="text-wrapper slide-up">
@@ -83,11 +92,7 @@
               <img src="./images/icons/blue-arrow-down.svg" alt="Scroll Down" />
             </a>
           </div>
-          <ul class="slider-dots">
-            <li class="dot"></li>
-            <li class="dot active"></li>
-            <li class="dot"></li>
-          </ul>
+          <div class="slider-dots"></div>
         </div>
       </div>
     </div>
@@ -570,37 +575,49 @@
       </div>
     </div>
   </section>
-  <!-- <section class="offers-section">
+  <section class="offers-section scroll-animation">
     <div class="shape-paralax-item">
       <img src="./images/icons/pentagon.svg" alt="">
-      <div class="offers-slider swiper">
-        <div class="swipper-wrapper">
-          <div class="swiper-slide">
-            <div class="img-box"></div>
-            <span class="capture">Chusteczka odświeżająca</span>
-          </div>
-          <div class="swiper-slide">
-            <div class="img-box"></div>
-            <span class="capture">Chusteczka czyszcząco-odtłuczająca</span>
-          </div>
-          <div class="swiper-slide">
-            <div class="img-box"></div>
-            <span class="capture">Chusteczka antybakteryjna</span>
-          </div>
-          <div class="swiper-slide">
-            <div class="img-box"></div>
-            <span class="capture">Lorem Ipsum</span>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="container">
-      <div class="title-box">
+      <div class="title-box slide-up">
         <span class="eyebrow">oferta</span>
         <h2 class="title">Zgodnie z wymaganiami GMP. </h2>
       </div>
+      <ul class="offers-list slide-up">
+        <li class="offers-list-item">
+          <a href="#">
+            <div class="img-box">
+              <img src="./images/home-page/offers-1.png" alt="Chusteczka odświeżająca" class="block-img">
+              <div class="overlay"></div>
+              <img src="./images/icons/white-arrow-right.svg" alt="Open Page" class="arrow">
+            </div>
+            <h4 class="capture">Chusteczka odświeżająca</h4>
+          </a>
+        </li>
+        <li class="offers-list-item active">
+          <a href="#">
+            <div class="img-box">
+              <img src="./images/home-page/offers-2.png" alt="Chusteczka czyszcząco-odtłuczająca" class="block-img">
+              <div class="overlay"></div>
+            </div>
+            <h4 class="capture">Chusteczka czyszcząco-odtłuczająca</h4>
+          </a>
+        </li>
+        <li class="offers-list-item">
+          <a href="#">
+            <div class="img-box">
+              <img src="./images/home-page/offers-3.png" alt="Chusteczka antybakteryjna" class="block-img">
+              <div class="overlay"></div>
+              <img src="./images/icons/white-arrow-right.svg" alt="Open Page" class="arrow">
+            </div>
+            <h4 class="capture">Chusteczka antybakteryjna</h4>
+          </a>
+        </li>
+      </ul>
     </div>
-  </section> -->
+    <div class="border-slide-animation"></div>
+  </section>
   <section class="career-section">
     <div class="animated-tab"></div>
     <div class="overlay">
@@ -706,6 +723,9 @@
       </div>
     </div>
   </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
   <script src="./js/main.js"></script>
   <script src="./js/homePage.js"></script>
   <script src="./js/shapeParalax.js"></script>

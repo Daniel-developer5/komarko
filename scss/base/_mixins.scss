@@ -80,3 +80,52 @@
     display: none;
   }
 }
+
+@mixin full-absolute-bleed($space: 0, $position: absolute) {
+  position: $position;
+  top: $space;
+  right: $space;
+  bottom: $space;
+  left: $space;
+}
+
+@mixin border-slide-animation(
+  $border-radius: 0 25px, $border-side1: bottom, $border-side2: left,
+  $bottom-after: -3px, $bottom-before: -4px, $top: auto,
+) {
+  position: relative;
+  border-radius: $border-radius;
+  border-#{$border-side1}: 3px solid $color-blue;
+  border-#{$border-side2}: 3px solid $color-blue;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: $bottom-after;
+    top: $top;
+    left: 40px;
+    right: -100vw;
+    border-top: 3px solid #06A6B9;
+    z-index: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: $bottom-before;
+    top: $top;
+    left: -10px;
+    width: 100vw;
+    height: 110%;
+    background-color: #fff;
+  }
+}
+
+@mixin activate-border-animation($direction: up) {
+  &.animated {
+    .border-slide-animation:before {
+      animation: border-slide-#{$direction} 2s linear forwards;
+    }
+  }
+}

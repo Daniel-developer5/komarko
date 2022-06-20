@@ -1,4 +1,17 @@
 $(() => {
+  new Swiper('.hero-section-slider', {
+    effect: 'fade',
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    speed: 1300,
+    pagination: {
+      el: '.home-page-hero .slider-dots',
+      clickable: true,
+    },
+  })
+
   const buildSlides = (slides, sliderElement, changeBorderSize) => {
     const activeSlideCoef = 0.8
     const height = slides[0].offsetWidth / activeSlideCoef
