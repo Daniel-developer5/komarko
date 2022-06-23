@@ -4,14 +4,16 @@
   padding: 58px 64px 113px;
   overflow: hidden;
 
-  .shape-paralax-item {
-    @include shape-paralax-pentagon();
+  @media (max-width: $breakpoint-laptop) {
+    padding-bottom: 58px;
   }
 
-  &.animated {
-    .border-slide-animation:before {
-      animation: border-slide-up 2s linear forwards;
-    }
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
   }
 
   .border-slide-animation {
@@ -20,6 +22,11 @@
     height: 80px;
     width: 55%;
     margin-left: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      height: 40px;
+      margin-top: 8px;
+    }
   }
 
   .container {
@@ -38,13 +45,54 @@
       }
     }
 
+    .offers-slider {
+      position: relative;
+
+      @media (max-width: $breakpoint-laptop) {
+        padding: 0 60px;
+      }
+
+      .arrow {
+        @include slider-triangle-arrow;
+      }
+
+      .active-slide-border {
+        @include slide-purple-border;
+      }
+
+      .arrow, .active-slide-border {
+        display: none;
+
+        @media (max-width: $breakpoint-laptop) {
+          display: flex;
+        }
+      }
+    }
+
     .offers-list {
       display: grid;
-      grid-auto-flow: column;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
 
+      @media (max-width: $breakpoint-laptop) {
+        display: flex;
+        gap: 0;
+      }
+
       &-item {
+        height: auto;
+
+        > a {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
         &:hover {
+          .arrow {
+            opacity: 0;
+          }
+
           .img-box {
             @extend %horizontal-center;
             padding: 10px;
@@ -54,6 +102,16 @@
               content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='19' viewBox='0 0 27 19'%3E%3Cpath id='Polygon_7' data-name='Polygon 7' d='M13.5,0,27,19H0Z' transform='translate(27 19) rotate(180)' fill='%23c959a3'/%3E%3C/svg%3E%0A");
               position: absolute;
               bottom: -24px;
+
+              @media (max-width: $breakpoint-laptop) {
+                display: none;
+              }
+            }
+
+            @media (max-width: $breakpoint-laptop) {
+              padding: 0;
+              border: none;
+              justify-content: flex-start;
             }
           }
 
@@ -72,13 +130,21 @@
           border: 4px solid transparent;
           transition: ease 0.3s;
 
-          .overlay {
-            @include full-absolute-bleed();
-            z-index: 1;
-            opacity: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 25px;
-            transition: ease 0.3s;
+          @media (max-width: $breakpoint-laptop) {
+            border: none;
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 36px;
+          }
+
+          .img {
+            height: 100%;
+
+            @media (max-width: $breakpoint-tablet) {
+              &, img {
+                width: 100%;
+              }
+            }
           }
 
           .arrow {
@@ -88,6 +154,8 @@
             right: 36px;
             bottom: 36px;
             z-index: 2;
+            top: auto;
+            transition: ease 0.3s;
           }
 
           .block-img {
@@ -104,6 +172,10 @@
           max-width: 236px;
           margin: 0 auto;
           color: $color-black;
+
+          @media (max-width: $breakpoint-laptop) {
+            min-height: 40px;
+          }
         }
       }
     }

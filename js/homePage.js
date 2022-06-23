@@ -4,6 +4,7 @@ $(() => {
     loop: true,
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
     speed: 1300,
     pagination: {
@@ -79,6 +80,7 @@ $(() => {
 
   const innovationItems = $('.innovation-section .lists-wrapper .item')
   const innovationTexts = $('.innovation-slider .slider-descriptions .slider-text-box')
+  const scrollableWrapper = $('.innovation-section .lists-wrapper')
 
   const innovationSlider = new Swiper('.innovation-slider .swiper', {
     slidesPerView: 1,
@@ -101,6 +103,34 @@ $(() => {
 
         innovationTexts.removeClass('active')
         $(innovationTexts.get(realIndex)).addClass('active')
+
+        const currentIcon = innovationItems.eq(realIndex)
+        const width = currentIcon.width()
+        const left = currentIcon.offset().left
+
+        const scrollForward = left + width - window.innerWidth
+        const scrollBackward = left + width - scrollableWrapper.scrollLeft()
+
+        let scroll = scrollableWrapper.scrollLeft()
+
+        if (scrollForward > 0) {
+          scroll = scroll + Math.abs(scrollForward) + 15
+        } else if (scrollBackward < 0) {
+          scroll = left
+        }
+
+        scrollableWrapper.animate({
+          scrollLeft: scroll,
+        }, 300)
+      },
+    },
+    pagination: {
+      el: '.innovation-slider .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        pagination: {},
       },
     },
   })
@@ -111,5 +141,14 @@ $(() => {
       $(this).addClass('active')
       innovationSlider.slideTo(index + 1)
     })
+  })
+
+  $(window).scroll(() => {
+    const { scrollY } = window
+
+    if (scrollY <= $('.home-page-hero').height()) {
+      $('.hero-section-slider').css('transform', `translateY(${scrollY}px)`)
+    }
+
   })
 })

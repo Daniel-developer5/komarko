@@ -275,6 +275,35 @@
         }
       }
 
+      .swiper-pagination {
+        display: none;
+        position: static;
+        margin-top: 16px;
+        margin-bottom: 24px;
+
+        @media (max-width: $breakpoint-tablet) {
+          display: block;
+        }
+
+        @media (max-width: 500px) {
+          margin-top: -16px;
+        }
+
+        .swiper-pagination-bullet {
+          margin: 0 2px;
+          width: 16px;
+          height: 16px;
+          background-color: transparent;
+          border: 3px solid $color-secondary-gray;
+          opacity: 1;
+
+          &.swiper-pagination-bullet-active {
+            background-color: $color-purple;
+            border-color: $color-purple;
+          }
+        }
+      }
+
       .slider-descriptions {
         @extend %horizontal-center;
         position: relative;
@@ -296,6 +325,10 @@
 
         &.active {
           opacity: 1;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          margin-top: 0;
         }
 
         .title {

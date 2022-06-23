@@ -11,6 +11,7 @@
     @include full-absolute-bleed();
     z-index: 1;
     height: 100vh;
+    overflow: hidden;
   }
 
   .hero-section-slider {

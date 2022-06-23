@@ -13,6 +13,17 @@ $(() => {
     }
   })
 
+  const calcMobileNavProperties = () => {
+    const navHeight = $('.navigation').outerHeight()
+
+    $('.navigation .mobile-navigation').css({
+      top: navHeight,
+      height: `calc(100% - ${navHeight}px)`,
+    })
+  }
+
+  calcMobileNavProperties()
+
   const footerResponsive = () => {
     if (window.innerWidth < 768) {
       $('.page-footer .contacts').appendTo('.page-footer .links')
@@ -22,7 +33,6 @@ $(() => {
   }
 
   footerResponsive()
-  $(window).on('resize', footerResponsive)
 
   const scrollAnimation = {
     afterReveal(el) {
@@ -40,5 +50,57 @@ $(() => {
 
   $('.innovation-section .lists-wrapper .item').each(function (i) {
     $(this).css('transition-delay', `${i / 4}s`)
+  })
+
+  const initOffersSliderBorder = slides => {
+    $('.offers-slider .active-slide-border').css({
+      width: slides[0].offsetWidth + 20,
+      height: $(slides[0]).find('.img-box').height() + 20,
+    })
+  }
+
+  const initOffersSlider = () => {
+    let offersSlider = new Swiper('.offers-slider .swiper', {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      loop: true,
+      speed: 1000,
+      navigation: {
+        prevEl: '.offers-slider .arrow-left',
+        nextEl: '.offers-slider .arrow-right',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+      },
+      on: {
+        init({ slides }) {
+          initOffersSliderBorder(slides)
+        },
+        resize(slider) {
+          if (window.innerWidth >= 992) {
+            slider.destroy()
+            return
+          }
+
+          initOffersSliderBorder(slider.slides)
+        },
+      }
+    })
+
+    if (window.innerWidth >= 992) {
+      offersSlider.destroy(true)
+    }
+  }
+
+  initOffersSlider()
+
+  $(window).on('resize', () => {
+    footerResponsive()
+    initOffersSlider()
+    calcMobileNavProperties()
   })
 })

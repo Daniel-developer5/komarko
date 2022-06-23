@@ -15,6 +15,7 @@ html.overflow, body.overflow {
     padding-bottom: 16px;
     background-color: #fff;
     border-bottom: 1px solid rgba($color: #000, $alpha: 0.1); 
+    position: fixed;
   }
 
   @media (max-width: $breakpoint-tablet) {
@@ -22,9 +23,7 @@ html.overflow, body.overflow {
   }
 
   .container {
-    @media (max-width: $breakpoint-desktop) {
-      justify-content: space-between;
-    }
+    justify-content: space-between;
     
     &, .logo {
       @extend %vertical-center;
@@ -214,10 +213,10 @@ html.overflow, body.overflow {
 
   .mobile-navigation {
     display: none;
-    position: absolute;
-    top: calc(100% + 1px);
+    position: fixed;
+    top: 84px;
     right: 0;
-    height: calc(100vh - 100%);
+    height: calc(100vh - 84px);
     max-width: 414px;
     width: 414px;
     background-color: #fff;
