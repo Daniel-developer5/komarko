@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="text/css" rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,13 +11,18 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
   <title>Komarko</title>
 </head>
 <body>
   <header class="navigation">
     <div class="container xl">
       <div class="logo">
-        <img src="./images/logos/white-logo.svg" alt="Komarko">
+        <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+        <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
         <p class="text">
           twój partner w produkcji kontraktowej
         </p>
@@ -63,6 +67,81 @@
         <a href="#" class="in-btn">
           <img src="./images/icons/linkedIn.svg" alt="linkedIn">
         </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="#">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="#" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Usługi</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Jakość</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white">Zaloguj</button>
+          <button class="search-btn button button-white">
+            <img src="./images/icons/search.svg" alt="search">
+          </button>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -182,48 +261,6 @@
         <div class="inner-wrap">
           <h2 class="title slide-up">Aktualności</h2>
           <ul class="news-list slide-up">
-            <li class="news-list-item">
-              <a href="#" class="link">
-                <div class="news-img-box">
-                  <img src="./images/home-page/news-1.png" alt="">
-                </div>
-                <div class="info-box">
-                  <span class="date">01-01-2022</span>
-                  <h4 class="news-title">Lorem ipsum. Imprestio empra ova</h4>
-                  <p class="text">
-                    In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="news-list-item">
-              <a href="#" class="link">
-                <div class="news-img-box">
-                  <img src="./images/home-page/news-1.png" alt="">
-                </div>
-                <div class="info-box">
-                  <span class="date">01-01-2022</span>
-                  <h4 class="news-title">Lorem ipsum. Imprestio empra ova</h4>
-                  <p class="text">
-                    In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="news-list-item">
-              <a href="#" class="link">
-                <div class="news-img-box">
-                  <img src="./images/home-page/news-1.png" alt="">
-                </div>
-                <div class="info-box">
-                  <span class="date">01-01-2022</span>
-                  <h4 class="news-title">Lorem ipsum. Imprestio empra ova</h4>
-                  <p class="text">
-                    In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
-                  </p>
-                </div>
-              </a>
-            </li>
             <li class="news-list-item">
               <a href="#" class="link">
                 <div class="news-img-box">
@@ -589,17 +626,15 @@
           <a href="#">
             <div class="img-box">
               <img src="./images/home-page/offers-1.png" alt="Chusteczka odświeżająca" class="block-img">
-              <div class="overlay"></div>
               <img src="./images/icons/white-arrow-right.svg" alt="Open Page" class="arrow">
             </div>
             <h4 class="capture">Chusteczka odświeżająca</h4>
           </a>
         </li>
-        <li class="offers-list-item active">
+        <li class="offers-list-item">
           <a href="#">
             <div class="img-box">
               <img src="./images/home-page/offers-2.png" alt="Chusteczka czyszcząco-odtłuczająca" class="block-img">
-              <div class="overlay"></div>
             </div>
             <h4 class="capture">Chusteczka czyszcząco-odtłuczająca</h4>
           </a>
@@ -608,7 +643,6 @@
           <a href="#">
             <div class="img-box">
               <img src="./images/home-page/offers-3.png" alt="Chusteczka antybakteryjna" class="block-img">
-              <div class="overlay"></div>
               <img src="./images/icons/white-arrow-right.svg" alt="Open Page" class="arrow">
             </div>
             <h4 class="capture">Chusteczka antybakteryjna</h4>

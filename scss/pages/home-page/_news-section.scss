@@ -71,13 +71,6 @@
       .news-list {
         display: grid;
         gap: 30px;
-        max-height: 910px;
-        overflow-x: hidden;
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
 
         &-item {
           .link {

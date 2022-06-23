@@ -8,8 +8,16 @@
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }
 
 ul {

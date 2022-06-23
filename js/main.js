@@ -1,4 +1,18 @@
 $(() => {
+  $('.navigation .navigation-link.accordion').accordion({
+    collapsible: true,
+    active: false,
+  })
+
+  $('.navigation .burger-menu-btn').click(function () {
+    $('.navigation .mobile-navigation').toggleClass('show')
+    $(this).toggleClass('is-active')
+
+    if (window.innerWidth < 768) {
+      $('html, body').toggleClass('overflow')
+    }
+  })
+
   const footerResponsive = () => {
     if (window.innerWidth < 768) {
       $('.page-footer .contacts').appendTo('.page-footer .links')

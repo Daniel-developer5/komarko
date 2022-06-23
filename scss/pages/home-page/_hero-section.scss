@@ -1,6 +1,7 @@
 .home-page-hero {
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 
   @media (max-width: $breakpoint-tablet) {
     background-size: cover;
@@ -16,7 +17,7 @@
     height: 100vh;
 
     .swiper-slide {
-      background-size: 100%;
+      background-size: cover;
       background-position: center center;
       background-attachment: fixed;
     }
