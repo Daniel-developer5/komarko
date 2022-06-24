@@ -51,9 +51,9 @@
   text-transform: uppercase;
   color: $color-white;
 
-  @media (max-width: $breakpoint-laptop) {
+  @media (max-width: $breakpoint-desktop-xl) {
     font-size: 64px;
-    line-height: 95px;
+    line-height: 120%;
   }
 
   @media (max-width: $breakpoint-tablet) {

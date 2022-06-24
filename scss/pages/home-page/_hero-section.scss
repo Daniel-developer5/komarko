@@ -46,26 +46,28 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 15%;
-    padding: 15% 118px 64px;
+    padding: 0 118px 64px;
     min-height: 100vh;
+
+    @media (max-width: $breakpoint-laptop) {
+      padding-right: 64px;
+      padding-left: 64px;
+    }
 
     @media (max-width: $breakpoint-tablet) {
       padding: 32px 16px;
     }
 
     .text-wrapper {
-      @media (max-width: $breakpoint-laptop) {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-      }
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
     }
 
     .text {
       margin-left: 10%;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-laptop) {
         margin-left: 0;
       }
 
@@ -73,6 +75,10 @@
         @extend %text-h1;
         margin-bottom: 25px;
         max-width: 835px;
+
+        .blue-text {
+          display: block;
+        }
       }
     }
 

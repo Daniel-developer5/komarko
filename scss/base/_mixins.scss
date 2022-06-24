@@ -78,6 +78,10 @@
     @if ($bottom == auto) {
       top: calc($top * 2.5);
     }
+
+    @if ($top == auto) {
+      bottom: -50%;
+    }
   }
 
   @media (max-width: $breakpoint-tablet) {
