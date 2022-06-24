@@ -149,6 +149,9 @@ $(() => {
     if (scrollY <= $('.home-page-hero').height()) {
       $('.hero-section-slider').css('transform', `translateY(${scrollY}px)`)
     }
-
   })
+
+  if (!/^(iPhone|iPad|iPod)/.test(navigator.userAgent)) {
+    $('.career-section').css('background-attachment', 'fixed')
+  }
 })

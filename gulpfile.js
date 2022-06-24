@@ -13,7 +13,7 @@ const style = () => {
 const watch = () => {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: './',
     }
   })
 

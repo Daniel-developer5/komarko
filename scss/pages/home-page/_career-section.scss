@@ -2,7 +2,6 @@
   @include section-animated-tab(0 0 40px 0, 0, $color-blue, -100%);
   background-image: url('../images/home-page/career-img.jpg');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
 
   .overlay {
