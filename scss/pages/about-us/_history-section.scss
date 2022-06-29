@@ -1,0 +1,49 @@
+.history-section {
+  padding: 64px;
+  position: relative;
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    .title {
+      @extend %text-h2;
+      margin-bottom: 44px;
+      color: $color-black;
+    }
+
+    .big-img-block {
+      margin-top: 95px;
+
+      .text-box {
+        margin: 0 auto;
+        max-width: 780px;
+
+        .title {
+          @extend %text-h4;
+          margin-bottom: 20px;
+          color: $color-black;
+        }
+
+        .text {
+          @extend %text-body-small;
+          color: $color-black;
+        }
+      }
+
+      .img-box {
+        margin: 60px 0;
+        width: 100%;
+        max-height: 540px;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.secondary-page-hero {
+  .sub-page-banner {
+    padding: 30px 36px 25px;
+
+    .container {
+      display: flex;
+      justify-content: flex-end;
+
+      .text {
+        @extend %text-body-ultra-small;
+        display: flex;
+        text-transform: uppercase;
+        color: $color-gray;
+
+        .line {
+          display: block;
+          margin: 0 12px;
+        }
+
+        .current-page-text {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  .hero-section-img {
+    padding-top: 534px;
+    background-image: url('../images/bg/about-us-bg.png');
+    background-size: cover;
+
+    .text-box {
+      padding: 68px 118px 100px;
+      position: relative;
+      background-color: rgba($color: $color-blue, $alpha: 0.9);
+
+      .white-arrow-down {
+        position: absolute;
+        left: 4%;
+      }
+
+      .eyebrow {
+        @extend %text-button;
+        display: block;
+        margin-bottom: 10px;
+        color: $color-white;
+      }
+
+      .title {
+        @extend %text-h3;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.sections-navigation {
+  padding: 0 64px;
+  background-color: $color-secondary-dark-blue;
+  z-index: 100;
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  .container {
+    @extend %vertical-center;
+
+    .arrow {
+      margin-right: 16px;
+    }
+
+    .links {
+      display: flex;
+
+      .link {
+        transition: ease 0.3s;
+
+        &:hover, &.active {
+          background-color: $color-blue;
+        }
+
+        a {
+          display: block;
+          padding: 28px 32px;
+          font-family: 'Rajdhani', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 23px;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

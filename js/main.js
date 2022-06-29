@@ -36,6 +36,12 @@ $(() => {
 
   calcMobileNavProperties()
 
+  const calcPaddingTop = () => {
+    $('.secondary-page-hero').css('padding-top', $('header.navigation').outerHeight())
+  }
+
+  calcPaddingTop()
+
   const footerResponsive = () => {
     if (window.innerWidth < 768) {
       $('.page-footer .contacts').appendTo('.page-footer .links')
@@ -72,6 +78,10 @@ $(() => {
   }
 
   const initOffersSlider = () => {
+    if (!$('.offers-slider .swiper').length) {
+      return
+    }
+
     let offersSlider = new Swiper('.offers-slider .swiper', {
       slidesPerView: 1,
       slidesPerGroup: 1,
@@ -114,5 +124,6 @@ $(() => {
     footerResponsive()
     initOffersSlider()
     calcMobileNavProperties()
+    calcPaddingTop()
   })
 })

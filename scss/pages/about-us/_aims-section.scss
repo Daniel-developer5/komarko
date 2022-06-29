@@ -1,0 +1,70 @@
+.aims-section {
+  @include section-animated-tab(0 0 40px 0, 0, $color-blue, -100%);
+  position: relative;
+  padding: 70px 64px 140px;
+  background-color: $color-secondary-dark-blue;
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon(50%);
+  }
+
+  .container {
+    .text-box {
+      margin-bottom: 90px;
+
+      .title {
+        @extend %text-h2;
+        margin-bottom: 40px;
+        color: $color-white;
+      }
+
+      .text-sides {
+        display: flex;
+
+        .side-title {
+          @extend %text-h4;
+          margin-bottom: 26px;
+          max-width: 320px;
+          color: $color-white;
+        }
+
+        .text {
+          @extend %text-body-small;
+          color: $color-white;
+        }
+
+        .left-side, .right-side {
+          @extend %horizontal-center;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .left-side {
+          padding-right: 110px;
+          border-right: 1px solid rgba($color: #fff, $alpha: 0.6);
+        }
+
+        .right-side {
+          padding-left: 110px;
+
+          .side-title {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .img-box {
+      max-height: 540px;
+      border-radius: 25px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

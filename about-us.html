@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <title>Komarko</title>
+</head>
+<body>
+  <header class="navigation light">
+    <div class="container xl">
+      <div class="logo">
+        <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+        <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
+        <p class="text">
+          twój partner w produkcji kontraktowej
+        </p>
+      </div>
+      <ul class="navigation-links">
+        <li class="navigation-link">
+          <a href="#">O nas</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">R & D</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Oferta</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Aktualności</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kariera</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kontakt</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#" class="button button-blue">Konfigurator produktu</a>
+        </li>
+      </ul>
+      <div class="additional-buttons">
+        <button class="search-btn button button-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.639" height="17.634" viewBox="0 0 17.639 17.634">
+            <path id="Path_12" data-name="Path 12" d="M14541.443,9836.052l-2.963-2.962a7.97,7.97,0,1,1,1.609-1.607l2.961,2.959a1.138,1.138,0,0,1-1.607,1.61Zm-13.416-9.339a5.684,5.684,0,0,0,9.631,4.1c.024-.027.046-.054.072-.08a.962.962,0,0,1,.081-.073,5.687,5.687,0,1,0-9.784-3.943Z" transform="translate(-14525.748 -9818.75)" fill="#fff"/>
+          </svg>
+        </button>
+        <button class="login-btn button button-white">Zaloguj</button>
+        <button class="lang-btn">
+          <img src="./images/icons/en-lang.svg" alt="English">
+        </button>
+        <a href="#" class="in-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
+            <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M4.29,19.166H.317V6.37H4.29ZM2.3,4.625A2.312,2.312,0,1,1,4.6,2.3,2.321,2.321,0,0,1,2.3,4.625ZM19.162,19.166H15.2V12.937c0-1.485-.03-3.388-2.066-3.388-2.066,0-2.382,1.613-2.382,3.281v6.336H6.779V6.37H10.59V8.116h.056a4.175,4.175,0,0,1,3.76-2.066c4.021,0,4.761,2.648,4.761,6.088v7.029Z" transform="translate(0 -0.001)" fill="#fff"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="#">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="#" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Jakość</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white">Zaloguj</button>
+          <button class="search-btn button button-white">
+            <img src="./images/icons/search.svg" alt="search">
+          </button>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="secondary-page-hero">
+    <div class="sub-page-banner">
+      <div class="container xl">
+        <div class="text">
+          <a href="/" class="main-page-text">Strona główna</a>
+          <span class="line">/</span>
+          <span class="current-page-text">o nas</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section-img">
+      <div class="text-box">
+        <a href="#history-section" class="white-arrow-down">
+          <img src="./images/icons/white-arrow-down.svg" alt="Down">
+        </a>
+        <div class="container slide-up">
+          <span class="eyebrow">O nas</span>
+          <h3 class="title">
+            KOMARKO tworzy<br>
+            <span class="text-bold underlined-text">przyjazne środowisko</span> do produkcji<br>
+            kontraktowej <span class="text-bold underlined-text">suplementów diety</span>.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="sections-navigation-trigger">
+    <div class="sections-navigation">
+      <div class="container">
+        <div class="arrow">
+          <img src="./images/icons/white-arrow-right.svg" alt="">
+        </div>
+        <ul class="links slide-up">
+          <li class="link active">
+            <a href="#history-section">Historia</a>
+          </li>
+          <li class="link">
+            <a href="#mission-section">Misja</a>
+          </li>
+          <li class="link">
+            <a href="#aims-section">Cele</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="history-section" id="history-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <h2 class="title slide-up">Historia</h2>
+      <div class="text-img-block slide-up">
+        <div class="img-box">
+          <img src="./images/about-us-page/history-doctor.png" alt="właśna produkcja">
+        </div>
+        <div class="text-box">
+          <h4 class="title">Główną działalnością firmy KOMARKO jest właśnie produkcja kontraktowa suplementów diety. </h4>
+          <p class="text">
+            Wychodząc naprzeciw rosnącym wymaganiom klientów rynku jak również przyszłościowym zmianom w prawie wytwarzania suplementów diety, firma KOMARKO stosuje standardy farmaceutyczne przy wytwarzaniu w/w produktów.
+          </p>
+        </div>
+      </div>
+      <div class="big-img-block">
+        <div class="text-box slide-up">
+          <h4 class="title">
+            Suplementy diety wytwarzane przez firmę KOMARKO są produkowane z wyprzedzeniem obecnie wymaganych standardów dotyczących produkcji żywności przewidzianych przez prawo.
+          </h4>
+          <p class="text">
+            Zastosowane innowacyjne technologie gwarantują usługę najwyższej jakości, terminową oraz w pełni dopasowaną do potrzeb klienta. Powierzone nam zlecenia realizowane są w całkowitej zgodności z wymaganiami GMP
+          </p>
+        </div>
+        <div class="img-box slide-up">
+          <img src="./images/about-us-page/history-pills.png" alt="Suplementy diety">
+        </div>
+        <div class="text-box slide-up">
+          <p class="text">
+            Kompleksowość usług i oparcie ich na wieloletnim i wszechstronnym doświadczeniu firmy, pozwala nam oferować je wyjątkowo przystępnych cenach i w terminach znacznie krótszych, niż większość podmiotów oferujących podobne usługi. Starannie przy tym przestrzegamy wysokiego standardu jakości określonego w stosownych rozporządzeniach GMP.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mission-section scroll-animation" id="mission-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="border-slide-animation"></div>
+    <div class="container">
+      <h2 class="title slide-up">Misja</h2>
+      <div class="text-img-block slide-up">
+        <div class="img-box">
+          <img src="./images/about-us-page/mission.png" alt="Misja">
+        </div>
+        <div class="text-box">
+          <h4 class="title">
+            Optymalne miejsce <br>
+            do produkcji kontraktowej
+          </h4>
+          <p class="text">
+            Naszą misją jest stworzenie optymalnego miejsca do produkcji kontraktowej suplementów diety, gdzie kupujący dokonują transakcji w bezpieczny i wygodny sposób, otrzymując produkt wytworzony w zgodności ze standardami GMP
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="aims-section" id="aims-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon-white.svg" alt="">
+    </div>
+    <div class="animated-tab"></div>
+    <div class="container">
+      <div class="text-box">
+        <h2 class="title slide-up">Cele</h2>
+        <div class="text-sides slide-up">
+          <div class="left-side">
+            <h4 class="side-title">
+              Optymalne miejsce <br>
+              do produkcji kontraktowej
+            </h4>
+            <p class="text">
+              Naszą misją jest stworzenie optymalnego miejsca do produkcji kontraktowej suplementów diety, gdzie kupujący dokonują transakcji w bezpieczny i wygodny sposób, otrzymując produkt wytworzony w zgodności ze standardami GMP
+            </p>
+          </div>
+          <div class="right-side">
+            <h4 class="side-title">
+              Sprawdź naszą platformę <br>
+              do produkcji suplementów diety
+            </h4>
+            <a href="#" class="button button-blue">konfigurator porduktów</a>
+          </div>
+        </div>
+      </div>
+      <div class="img-box slide-up">
+        <img src="./images/about-us-page/aim.png" alt="Cele">
+      </div>
+    </div>
+  </div>
+  <footer class="footer page-footer">
+    <div class="container">
+      <div class="footer-heading">
+        <div class="logo">
+          <img src="./images/logos/white-logo.svg" alt="Komarko">
+        </div>
+        <div class="buttons">
+          <button class="button button-white">Konfigurator produktu</button>
+          <button class="button button-white">Zaloguj</button>
+        </div>
+      </div>
+      <div class="footer-information">
+        <div class="links">
+          <ul class="links-list">
+            <li class="link title margin-bottom">O nas</li>
+            <li class="link"><a href="#">Historia</a></li>
+            <li class="link"><a href="#">Misja </a></li>
+            <li class="link margin-bottom"><a href="#">Cele</a></li>
+            <li class="link title"><a href="#">Jakośc</a></li>
+            <li class="link title"><a href="#">Oferta</a></li>
+            <li class="link title"><a href="#">Aktualności</a></li>
+            <li class="link title"><a href="#">Kariera</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Projekty Badawcze</a></li>
+            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="#">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
+            <li class="link"><a href="#">Lokale</a></li>
+            <li class="link"><a href="#">Działki</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">Usługi</li>
+            <li class="link"><a href="#">Proszk</a></li>
+            <li class="link"><a href="#">Granulaty</a></li>
+            <li class="link"><a href="#">Mikrogranulaty</a></li>
+            <li class="link"><a href="#">Tabletki</a></li>
+            <li class="link"><a href="#">Kapsułki</a></li>
+            <li class="link"><a href="#">Saszetki</a></li>
+            <li class="link"><a href="#">Konfekcja</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <span class="link title margin-bottom">Kontakt</span>
+          <p class="text">
+            KOMARKO Sp. z o.o.
+            <br>
+            05-850 Ożarów Mazowiecki
+            <br>
+            ul. Kierbedzia 8
+            <br>
+            skrytka pocztowa nr 68
+          </p>
+          <p class="text">
+            +48 22 722 42 56
+            <br>
+            +48 22 722 38 89
+            <br>
+            komarko@komarko.pl
+          </p>
+          <ul class="socials">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/shapeParalax.js"></script>
+  <script src="./js/sectionsNavigation.js"></script>
+</body>
+</html>

@@ -19,4 +19,8 @@
     border: 3px solid $color-secondary-gray;
     color: rgba($color: $color-black, $alpha: 0.5);
   }
+
+  &.dark-color {
+    color: $color-black;
+  }
 }

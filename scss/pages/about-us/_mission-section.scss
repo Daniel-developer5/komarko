@@ -1,0 +1,32 @@
+.mission-section {
+  @include activate-border-animation('down');
+  padding: 64px 64px 210px;
+  position: relative;
+
+  .border-slide-animation {
+    @include border-slide-animation(25px 0 0 0, top, left, auto, -3px, -3px);
+    height: 80px;
+    width: 55%;
+    margin-left: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      height: 40px;
+    }
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    .title {
+      @extend %text-h2;
+      margin-bottom: 44px;
+      color: $color-black;
+    }
+
+    .text-img-block {
+      @include line-animation();
+    }
+  }
+}

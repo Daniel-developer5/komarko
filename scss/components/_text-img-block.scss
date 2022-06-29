@@ -1,0 +1,27 @@
+.text-img-block {
+  @extend %vertical-center;
+
+  .img-box {
+    width: 50%;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .text-box {
+    width: 50%;
+    max-width: 480px;
+    margin-left: 120px;
+    padding: 100px 0;
+
+    .title {
+      @extend %text-h4;
+      margin-bottom: 20px;
+      color: $color-black;
+    }
+
+    .text {
+      @extend %text-body-small;
+      color: $color-black;
+    }
+  }
+}
