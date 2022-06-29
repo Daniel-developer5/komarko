@@ -1,4 +1,16 @@
 $(() => {
+  $(window).scroll(() => {
+    if (window.innerWidth <= 1440) {
+      return
+    }
+
+    if (window.scrollY > 0) {
+      $('header.navigation').addClass('fixed')
+    } else {
+      $('header.navigation').removeClass('fixed')
+    }
+  })
+
   $('.navigation .navigation-link.accordion').accordion({
     collapsible: true,
     active: false,

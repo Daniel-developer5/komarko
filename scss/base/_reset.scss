@@ -35,6 +35,10 @@ button, input, textarea {
   background: none;
 }
 
+[role=button] {
+  outline: none;
+}
+
 button {
   cursor: pointer;
 }
