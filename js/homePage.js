@@ -154,4 +154,19 @@ $(() => {
   if (!/^(iPhone|iPad|iPod)/.test(navigator.userAgent)) {
     $('.career-section').css('background-attachment', 'fixed')
   }
+
+  const calcValue = (value, isY) => {
+    const { innerWidth, innerHeight } = window
+
+    return (value - (isY ? innerHeight : innerWidth) / 2) / -12
+  }
+
+  const moveHeroBg = ({ clientX, clientY }) => {
+    $('.home-page-hero .swiper .img-slide').css(
+      'transform', `translate(${calcValue(clientX)}px, ${calcValue(clientY, true)}px)`
+    )
+  }
+
+  $('.home-page-hero').mousemove(moveHeroBg)
+  $('header.navigation').mousemove(moveHeroBg)
 })

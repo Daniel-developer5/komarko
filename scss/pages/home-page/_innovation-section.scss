@@ -150,13 +150,37 @@
           transform: scale(1);
         }
 
+        &:not(.active) {
+          svg {
+            &.special-path {
+              path {
+                &:first-child {
+                  fill: $color-black;
+                }
+
+                fill: #fff;
+              }
+            }
+
+            &.bottle {
+              path {
+                &:nth-child(2) {
+                  fill: $color-black;
+                }
+  
+                fill: #fff;
+              }
+            }
+
+            path {
+              fill: $color-black;
+            }
+          }
+        }
+
         &.active {
           .icon {
             border-color: $color-blue;
-  
-            svg path {
-              fill: $color-blue;
-            }
           }
   
           .capture {
@@ -258,10 +282,10 @@
 
         &-slide {
           img {
-            transform: translateY(-20%);
+            transform: translateY(-60%);
 
             @media (max-width: $breakpoint-laptop) {
-              transform: translateY(-15px);
+              transform: translateY(-40%);
             } 
           }
         }

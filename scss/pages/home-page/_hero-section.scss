@@ -18,8 +18,16 @@
     height: 100vh;
 
     .swiper-slide {
-      background-size: cover;
-      background-position: center center;
+      position: relative;
+
+      .img-slide {  
+        @include full-absolute-bleed(-10%);
+        min-height: 100%;
+        background-size: cover;
+        background-position: center center;
+        transition: ease-out 0.5s;
+        will-change: transform;
+      }
     }
 
     .slide-1 {
