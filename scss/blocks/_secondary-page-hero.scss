@@ -103,25 +103,22 @@
       display: flex;
 
       .link {
+        display: block;
+        padding: 28px 32px;
+        font-family: 'Rajdhani', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        color: $color-white;
         transition: ease 0.3s;
+
+        @media (max-width: $breakpoint-tablet) {
+          padding: 16px;
+        }
 
         &:hover, &.active {
           background-color: $color-blue;
-        }
-
-        a {
-          display: block;
-          padding: 28px 32px;
-          font-family: 'Rajdhani', sans-serif;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 23px;
-          color: $color-white;
-
-          @media (max-width: $breakpoint-tablet) {
-            padding: 16px;
-          }
         }
       }
     }
