@@ -1,19 +1,20 @@
 $(() => {
   const trigger = $('.sections-navigation-trigger')
   const nav = $('.sections-navigation')
-  const headerHeight = $('header.navigation').height() + 32
   let fixedTriggered = false
+
+  const getHeaderHeight = () => Math.ceil($('header.navigation').height() + 32)
 
   $(window).scroll(() => {
     const { scrollY } = window
 
-    if (scrollY >= trigger.offset().top - headerHeight) {
+    if (scrollY >= trigger.offset().top - getHeaderHeight()) {
       if (fixedTriggered) {
         return
       }
 
       nav.addClass('fixed')
-      nav.css('top',  headerHeight)
+      nav.css('top',  getHeaderHeight())
       trigger.css('padding-top', nav.outerHeight())
       fixedTriggered = true
     } else {

@@ -180,3 +180,22 @@
     transition: ease 1s;
   }
 }
+
+
+@mixin blue-square-bg {
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    top: 35%;
+    right: -15vw;
+    height: 720px;
+    border-radius: 25px;
+    background-color: $color-secondary-sky;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;        
+    }
+  }
+}

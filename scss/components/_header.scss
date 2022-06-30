@@ -45,8 +45,10 @@ html.overflow, body.overflow {
       }
 
       .search-btn, .login-btn {
-        @extend .button-gray;
-        @extend .dark-color;
+        &:not(.mobile-nav) {
+          @extend .button-gray;
+          @extend .dark-color;
+        }
       }
     }
   }
@@ -70,7 +72,7 @@ html.overflow, body.overflow {
   }
 
   @media (max-width: $breakpoint-tablet) {
-    padding: 14px 24px;
+    padding: 16px 24px;
   }
 
   .container {
@@ -268,7 +270,7 @@ html.overflow, body.overflow {
     width: 414px;
     background-color: #fff;
     transform: translateX(100%);
-    transition: ease 0.5s;
+    transition: transform ease 0.5s;
 
     @media (max-width: $breakpoint-desktop) {
       display: block;

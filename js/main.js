@@ -1,6 +1,6 @@
 $(() => {
   $(window).scroll(() => {
-    if (window.innerWidth <= 1440) {
+    if (window.innerWidth < 1440) {
       return
     }
 
@@ -19,6 +19,7 @@ $(() => {
   $('.navigation .burger-menu-btn').click(function () {
     $('.navigation .mobile-navigation').toggleClass('show')
     $(this).toggleClass('is-active')
+    calcMobileNavProperties()
 
     if (window.innerWidth < 768) {
       $('html, body').toggleClass('overflow')
@@ -27,10 +28,12 @@ $(() => {
 
   const calcMobileNavProperties = () => {
     const navHeight = $('.navigation').outerHeight()
+    const sectionsNavHeight = $('.sections-navigation.fixed').outerHeight()
+    const value = sectionsNavHeight ? sectionsNavHeight + navHeight : navHeight
 
     $('.navigation .mobile-navigation').css({
-      top: navHeight,
-      height: `calc(100% - ${navHeight}px)`,
+      top: value,
+      height: `calc(100% - ${value}px)`,
     })
   }
 

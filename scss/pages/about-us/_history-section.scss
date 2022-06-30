@@ -1,13 +1,21 @@
 .history-section {
+  @include blue-square-bg;
   padding: 64px;
   position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;     
+  }
 
   .shape-paralax-item {
     @include shape-paralax-pentagon();
   }
 
   .container {
-    .title {
+    position: relative;
+    z-index: 1;
+
+    > .title {
       @extend %text-h2;
       margin-bottom: 44px;
       color: $color-black;
@@ -15,6 +23,14 @@
 
     .big-img-block {
       margin-top: 95px;
+
+      @media (max-width: $breakpoint-desktop) {
+        margin-top: 24px;
+      }
+
+      @media (max-width: $breakpoint-laptop) {
+        margin-top: 60px;
+      }
 
       .text-box {
         margin: 0 auto;
@@ -39,8 +55,15 @@
         border-radius: 25px;
         overflow: hidden;
 
+        @media (max-width: $breakpoint-tablet) {
+          margin: 36px 0;
+          min-height: 200px;
+          display: flex;
+        }
+
         img {
           width: 100%;
+          min-height: 100%;
           object-fit: cover;
         }
       }

@@ -3,8 +3,16 @@
   padding: 64px 64px 210px;
   position: relative;
 
+  @media (max-width: $breakpoint-laptop) {
+    padding-bottom: 64px;  
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;     
+  }
+
   .border-slide-animation {
-    @include border-slide-animation(25px 0 0 0, top, left, auto, -3px, -3px);
+    @include border-slide-animation(25px 0 0 0, top, left, auto, 0, -3px);
     height: 80px;
     width: 55%;
     margin-left: auto;

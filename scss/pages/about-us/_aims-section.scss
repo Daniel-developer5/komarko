@@ -4,13 +4,25 @@
   padding: 70px 64px 140px;
   background-color: $color-secondary-dark-blue;
 
+  @media (max-width: $breakpoint-laptop) {
+    padding: 64px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;     
+  }
+
   .shape-paralax-item {
-    @include shape-paralax-pentagon(50%);
+    @include shape-paralax-pentagon(auto, -20%);
   }
 
   .container {
     .text-box {
       margin-bottom: 90px;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 40px;
+      }
 
       .title {
         @extend %text-h2;
@@ -20,6 +32,10 @@
 
       .text-sides {
         display: flex;
+
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column;    
+        }
 
         .side-title {
           @extend %text-h4;
@@ -42,10 +58,30 @@
         .left-side {
           padding-right: 110px;
           border-right: 1px solid rgba($color: #fff, $alpha: 0.6);
+
+          @media (max-width: $breakpoint-laptop) {
+            padding-right: 36px;
+          }
+
+          @media (max-width: $breakpoint-tablet) {
+            padding-right: 0;
+            padding-bottom: 36px;
+            border-right: none;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.6);
+          }
         }
 
         .right-side {
           padding-left: 110px;
+
+          @media (max-width: $breakpoint-laptop) {
+            padding-left: 36px;
+          }
+
+          @media (max-width: $breakpoint-tablet) {
+            padding-left: 0;
+            padding-top: 36px;
+          }
 
           .side-title {
             margin-right: auto;
@@ -61,8 +97,14 @@
       border-radius: 25px;
       overflow: hidden;
 
+      @media (max-width: $breakpoint-tablet) {
+        display: flex;
+        min-height: 200px;
+      }
+
       img {
         width: 100%;
+        min-height: 100%;
         object-fit: cover;
       }
     }

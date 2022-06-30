@@ -2,6 +2,10 @@
   .sub-page-banner {
     padding: 30px 36px 25px;
 
+    @media (max-width: $breakpoint-tablet) {
+      padding: 16px;   
+    }
+
     .container {
       display: flex;
       justify-content: flex-end;
@@ -29,14 +33,26 @@
     background-image: url('../images/bg/about-us-bg.png');
     background-size: cover;
 
+    @media (max-width: $breakpoint-tablet) {
+      padding-top: 200px;   
+    }
+
     .text-box {
       padding: 68px 118px 100px;
       position: relative;
       background-color: rgba($color: $color-blue, $alpha: 0.9);
 
+      @media (max-width: $breakpoint-tablet) {
+        padding: 40px 16px;
+      }
+
       .white-arrow-down {
         position: absolute;
         left: 4%;
+
+        @media (max-width: $breakpoint-tablet) {
+          display: none;
+        }
       }
 
       .eyebrow {
@@ -49,6 +65,12 @@
       .title {
         @extend %text-h3;
         color: $color-white;
+
+        @media (max-width: $breakpoint-laptop) {
+          br {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -58,6 +80,10 @@
   padding: 0 64px;
   background-color: $color-secondary-dark-blue;
   z-index: 100;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 16px;     
+  }
 
   &.fixed {
     position: fixed;
@@ -69,6 +95,7 @@
     @extend %vertical-center;
 
     .arrow {
+      min-width: 36px;
       margin-right: 16px;
     }
 
@@ -91,6 +118,10 @@
           font-size: 18px;
           line-height: 23px;
           color: $color-white;
+
+          @media (max-width: $breakpoint-tablet) {
+            padding: 16px;
+          }
         }
       }
     }
