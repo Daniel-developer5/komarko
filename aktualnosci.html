@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <title>Komarko</title>
+</head>
+<body>
+  <header class="navigation light">
+    <div class="container xl">
+      <div class="logo">
+        <a href="/">
+          <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+          <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
+        </a>
+        <p class="text">
+          twój partner w produkcji kontraktowej
+        </p>
+      </div>
+      <ul class="navigation-links">
+        <li class="navigation-link">
+          <a href="/o-nas.html">O nas</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">R & D</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Oferta</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Aktualności</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kariera</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kontakt</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#" class="button button-blue">Konfigurator produktu</a>
+        </li>
+      </ul>
+      <div class="additional-buttons">
+        <button class="search-btn button button-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.639" height="17.634" viewBox="0 0 17.639 17.634">
+            <path id="Path_12" data-name="Path 12" d="M14541.443,9836.052l-2.963-2.962a7.97,7.97,0,1,1,1.609-1.607l2.961,2.959a1.138,1.138,0,0,1-1.607,1.61Zm-13.416-9.339a5.684,5.684,0,0,0,9.631,4.1c.024-.027.046-.054.072-.08a.962.962,0,0,1,.081-.073,5.687,5.687,0,1,0-9.784-3.943Z" transform="translate(-14525.748 -9818.75)" fill="#fff"/>
+          </svg>
+        </button>
+        <button class="login-btn button button-white">Zaloguj</button>
+        <button class="lang-btn">
+          <img src="./images/icons/en-lang.svg" alt="English">
+        </button>
+        <a href="#" class="in-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
+            <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M4.29,19.166H.317V6.37H4.29ZM2.3,4.625A2.312,2.312,0,1,1,4.6,2.3,2.321,2.321,0,0,1,2.3,4.625ZM19.162,19.166H15.2V12.937c0-1.485-.03-3.388-2.066-3.388-2.066,0-2.382,1.613-2.382,3.281v6.336H6.779V6.37H10.59V8.116h.056a4.175,4.175,0,0,1,3.76-2.066c4.021,0,4.761,2.648,4.761,6.088v7.029Z" transform="translate(0 -0.001)" fill="#fff"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="/o-nas.html">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="#" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Jakość</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white mobile-nav">Zaloguj</button>
+          <button class="search-btn button button-white mobile-nav">
+            <img src="./images/icons/search.svg" alt="search">
+          </button>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="secondary-page-hero blog-page no-pt no-arrow">
+    <div class="sub-page-banner">
+      <div class="container xl">
+        <div class="text">
+          <a href="/" class="main-page-text">Strona główna</a>
+          <span class="line">/</span>
+          <span class="current-page-text">Aktualności</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section-img">
+      <div class="text-box">
+        <a href="#deals-section" class="white-arrow-down">
+          <img src="./images/icons/white-arrow-down.svg" alt="Down">
+        </a>
+        <div class="container slide-up">
+          <span class="eyebrow">Aktualności</span>
+          <h3 class="title">
+            Bądź na bieżąco<br>
+            z działalnością <span class="text-bold underlined-text">KOMARKO.</span>
+          </h3>
+          <p class="text">
+            Najnowsze wiadomości ze świata suplementów diety, informacje dla klientów, bezpłatne artykuły, nowoczesne metody produkty, wydarzenia w których uczestniczymy. To wszystko znaleźć można w dziale AKTUALNOŚCI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blog-section">
+    <div class="container">
+      <div class="filters">
+        <div class="category filter">
+          <span class="capture">Kategoria:</span>
+          <select class="category-select">
+            <option value="1" selected>Wszystkie</option>
+            <option value="2">Kategoria 2</option>
+          </select>
+        </div>
+        <div class="year filter">
+          <span class="capture">Rok:</span>
+          <select class="year-select">
+            <option value="2022" selected>2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+      </div>
+      <ul class="articles">
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="article">
+          <a href="#" class="link">
+            <div class="img-box">
+              <img src="./images/home-page/news-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <span class="date">01-01-2022</span>
+              <h4 class="title">
+                Lorem ipsum.
+                Imprestio empra ova
+              </h4>
+              <p class="text">
+                In the field of metallurgy, Alzchem's strength and expertise lies in our many years of experience, our in-depth metallurgical know-how, our very large production capacity and our excellent customer relationships.
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="load-more-button">
+        <button class="button button-blue">Zaladuj więcej</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer page-footer">
+    <div class="container">
+      <div class="footer-heading">
+        <div class="logo">
+          <img src="./images/logos/white-logo.svg" alt="Komarko">
+        </div>
+        <div class="buttons">
+          <button class="button button-white">Konfigurator produktu</button>
+          <button class="button button-white">Zaloguj</button>
+        </div>
+      </div>
+      <div class="footer-information">
+        <div class="links">
+          <ul class="links-list">
+            <li class="link title margin-bottom">O nas</li>
+            <li class="link"><a href="#">Historia</a></li>
+            <li class="link"><a href="#">Misja </a></li>
+            <li class="link margin-bottom"><a href="#">Cele</a></li>
+            <li class="link title"><a href="#">Jakośc</a></li>
+            <li class="link title"><a href="#">Oferta</a></li>
+            <li class="link title"><a href="#">Aktualności</a></li>
+            <li class="link title"><a href="#">Kariera</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Projekty Badawcze</a></li>
+            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="#">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
+            <li class="link"><a href="#">Lokale</a></li>
+            <li class="link"><a href="#">Działki</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">Usługi</li>
+            <li class="link"><a href="#">Proszk</a></li>
+            <li class="link"><a href="#">Granulaty</a></li>
+            <li class="link"><a href="#">Mikrogranulaty</a></li>
+            <li class="link"><a href="#">Tabletki</a></li>
+            <li class="link"><a href="#">Kapsułki</a></li>
+            <li class="link"><a href="#">Saszetki</a></li>
+            <li class="link"><a href="#">Konfekcja</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <span class="link title margin-bottom">Kontakt</span>
+          <p class="text">
+            KOMARKO Sp. z o.o.
+            <br>
+            05-850 Ożarów Mazowiecki
+            <br>
+            ul. Kierbedzia 8
+            <br>
+            skrytka pocztowa nr 68
+          </p>
+          <p class="text">
+            +48 22 722 42 56
+            <br>
+            +48 22 722 38 89
+            <br>
+            komarko@komarko.pl
+          </p>
+          <ul class="socials">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/blog-page.js"></script>
+</body>
+</html>

@@ -1,4 +1,20 @@
 .secondary-page-hero {
+  &.no-pt {
+    .hero-section-img {
+      padding-top: 0;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      padding-top: 0;  
+    }
+  }
+
+  &.no-arrow {
+    .white-arrow-down {
+      display: none;
+    }
+  }
+
   .sub-page-banner {
     padding: 30px 36px 25px;
 
@@ -71,6 +87,13 @@
             display: none;
           }
         }
+      }
+
+      .text {
+        @extend %text-body-small;
+        padding-top: 20px;
+        max-width: 480px;
+        color: $color-white;
       }
     }
   }

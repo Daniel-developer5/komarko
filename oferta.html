@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <title>Komarko</title>
+</head>
+<body class="offers-page">
+  <header class="navigation light">
+    <div class="container xl">
+      <div class="logo">
+        <a href="/">
+          <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+          <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
+        </a>
+        <p class="text">
+          twój partner w produkcji kontraktowej
+        </p>
+      </div>
+      <ul class="navigation-links">
+        <li class="navigation-link">
+          <a href="/o-nas.html">O nas</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">R & D</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Oferta</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Aktualności</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kariera</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kontakt</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#" class="button button-blue">Konfigurator produktu</a>
+        </li>
+      </ul>
+      <div class="additional-buttons">
+        <button class="search-btn button button-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.639" height="17.634" viewBox="0 0 17.639 17.634">
+            <path id="Path_12" data-name="Path 12" d="M14541.443,9836.052l-2.963-2.962a7.97,7.97,0,1,1,1.609-1.607l2.961,2.959a1.138,1.138,0,0,1-1.607,1.61Zm-13.416-9.339a5.684,5.684,0,0,0,9.631,4.1c.024-.027.046-.054.072-.08a.962.962,0,0,1,.081-.073,5.687,5.687,0,1,0-9.784-3.943Z" transform="translate(-14525.748 -9818.75)" fill="#fff"/>
+          </svg>
+        </button>
+        <button class="login-btn button button-white">Zaloguj</button>
+        <button class="lang-btn">
+          <img src="./images/icons/en-lang.svg" alt="English">
+        </button>
+        <a href="#" class="in-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
+            <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M4.29,19.166H.317V6.37H4.29ZM2.3,4.625A2.312,2.312,0,1,1,4.6,2.3,2.321,2.321,0,0,1,2.3,4.625ZM19.162,19.166H15.2V12.937c0-1.485-.03-3.388-2.066-3.388-2.066,0-2.382,1.613-2.382,3.281v6.336H6.779V6.37H10.59V8.116h.056a4.175,4.175,0,0,1,3.76-2.066c4.021,0,4.761,2.648,4.761,6.088v7.029Z" transform="translate(0 -0.001)" fill="#fff"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="/o-nas.html">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="#" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Jakość</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white mobile-nav">Zaloguj</button>
+          <button class="search-btn button button-white mobile-nav">
+            <img src="./images/icons/search.svg" alt="search">
+          </button>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="secondary-page-hero offers-page">
+    <div class="sub-page-banner">
+      <div class="container xl">
+        <div class="text">
+          <a href="/" class="main-page-text">Strona główna</a>
+          <span class="line">/</span>
+          <span class="current-page-text">Oferta po zminach</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section-img">
+      <div class="text-box">
+        <a href="#deals-section" class="white-arrow-down">
+          <img src="./images/icons/white-arrow-down.svg" alt="Down">
+        </a>
+        <div class="container slide-up">
+          <span class="eyebrow">Oferta</span>
+          <h3 class="title">
+            Innowacyjne <span class="text-bold underlined-text">technologie.</span><br>
+            Gwarantują najwyższą <span class="text-bold">jakość</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="sections-navigation-trigger">
+    <div class="sections-navigation">
+      <div class="container">
+        <div class="arrow">
+          <img src="./images/icons/white-arrow-right.svg" alt="">
+        </div>
+        <ul class="links">
+          <li>
+            <a href="#rd-section" class="link active">R&D</a>
+          </li>
+          <li>
+            <a href="#production-section" class="link">Produkcja</a>
+          </li>
+          <li>
+            <a href="#packing-section" class="link">Opakowanie</a>
+          </li>
+          <li>
+            <a href="#marketing-section" class="link">Analiza marketingowa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <section class="rd-section page-section scroll-detect" id="rd-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <h2 class="title slide-up">R&D</h2>
+      <div class="section-info slide-up">
+        <div class="img-box">
+          <img src="./images/offers-page/rd.jpg" alt="R&D" class="main-img">
+          <div class="icon">
+            <img src="./images/offers-page/bottle-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="text-box">
+          <h4 class="section-info-title">
+            Działania, które podejmujemy<br>
+            w ramach R&D:
+          </h4>
+          <ul class="info-list">
+            <li>
+              Opracowanie i udoskonalenie technologii postaci produktu w celu dostarczenia odbiorcom produktów najwyższej jakości i doskonałej przyswajalności przez organizm.
+            </li>
+            <li>
+              Dobranie optymalnych składów substancji czynnych w celu wykorzystania ich maksymalnego synergizmu również pod kątem długiego okresu przydatności do spożycia.
+            </li>
+            <li>
+              Opracowanie na potrzeby klienta dokumentacji technologicznej suplementów diety.
+            </li>
+            <li>
+              Testy stabilności i opracowanie dokumentacji w celu zgłoszenia do GIS.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="production-section page-section scroll-detect scroll-animation" id="production-section">
+    <div class="container">
+      <h2 class="title slide-up">Produkcja</h2>
+      <div class="border-slide-animation"></div>
+      <div class="section-info slide-up">
+        <div class="img-box">
+          <img src="./images/offers-page/production.jpg" alt="Produkcja" class="main-img">
+          <div class="icon purple">
+            <img src="./images/offers-page/settings-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="text-box">
+          <h4 class="section-info-title">
+            Działania, które podejmujemy<br>
+            w ramach Produkcji:
+          </h4>
+          <ul class="info-list">
+            <li>
+              pełny zakres prac związanych z procesem produkcyjnym oraz konfekcjonowaniem form płynnych i suchych;
+            </li>
+            <li>
+              naważanie według zleconej lub opracowanej przez naszych technologów receptury;
+            </li>
+            <li>
+              mieszanie lub homogenizowanie;
+            </li>
+            <li>
+              rozlew;
+            </li>
+            <li>
+              etykietowanie;
+            </li>
+            <li>
+              pakowanie w opakowania zbiorcze;
+            </li>
+            <li>
+              produkcja w skali dostosowanej do potrzeb klienta.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-slide-animation bottom"></div>
+    </div>
+  </section>
+  <section class="packing-section page-section scroll-detect" id="packing-section">
+    <div class="container">
+      <h2 class="title slide-up">Opakowanie</h2>
+      <div class="section-info slide-up">
+        <div class="img-box">
+          <img src="./images/offers-page/packing.jpg" alt="Opakowanie" class="main-img">
+          <div class="icon">
+            <img src="./images/offers-page/pills-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="text-box">
+          <h4 class="section-info-title">
+            Działania, które podejmujemy<br>
+            w ramach opakowań:
+          </h4>
+          <ul class="info-list">
+            <li>
+              Możliwość konfekcji w pojemniki z tworzywa sztucznego lub szklane, o uzgodnionej pojemności zamykane indukcyjnie.
+            </li>
+            <li>
+              Możliwość konfekcji w blistry PVC/Alu, PVDC/Alu, Alu/Alu.
+            </li>
+            <li>
+              Blistry mogą być perforowane (rozdzielanie na mniejsze fragmenty, lub pojedyncze tabletki).
+            </li>
+            <li>
+              Możliwość pakowania 3-ech różnych obiektów (tabletki w różnych kształtach/kolorach, tabletki i kapsułki, tabletki np.: „RANO”, „POŁUDNIE, WIECZÓR”) w jednym blistrze.
+            </li>
+            <li>
+              Pakowanie w kartoniki jednostkowe, opakowania typu display i kartony zbiorcze.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="marketing-section page-section scroll-detect scroll-animation" id="marketing-section">
+    <div class="container">
+      <h2 class="title slide-up">Analiza marketingowa</h2>
+      <div class="border-slide-animation"></div>
+      <div class="section-info slide-up">
+        <div class="img-box">
+          <img src="./images/offers-page/marketing.jpg" alt="Analiza marketingowa" class="main-img">
+          <div class="icon purple">
+            <img src="./images/offers-page/members-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="text-box">
+          <h4 class="section-info-title">
+            Monitorujemy rynek<br>
+            farmaceutyczny
+          </h4>
+          <p class="text">
+            Dokonujemy wnikliwej i kompleksowej analizy marketingowej, aby wychodzić naprzeciw współczesnemu rynkowi suplementów diety. Systematycznie pojawiamy się w miejscach styku z odbiorcą - bierzemy udział w wydarzeniach branżowych, publikujemy artykuły, bierzemy udział w szkoleniach, a także prowadzimy konta www i social media.
+          </p>
+        </div>
+      </div>
+      <div class="border-slide-animation bottom"></div>
+    </div>
+  </section>
+  <section class="resources-section">
+    <div class="container">
+      <ul class="resources-list slide-up">
+        <li class="resource">
+          <a href="#" class="link" download>
+            <div class="pdf-icon">
+              <div class="capture">Pdf</div>
+              <div class="download-icon">
+                <img src="./images/icons/download-icon.svg" alt="Download">
+              </div>
+            </div>
+            <div class="text">
+              <span class="filename">Komarko 18 RA HACCP Certificates pl</span>
+              <span class="file-size">2mb</span>
+            </div>
+          </a>
+        </li>
+        <li class="resource">
+          <a href="#" class="link" download>
+            <div class="pdf-icon">
+              <div class="capture">Pdf</div>
+              <div class="download-icon">
+                <img src="./images/icons/download-icon.svg" alt="Download">
+              </div>
+            </div>
+            <div class="text">
+              <span class="filename">Komarko 18 RA HACCP Certificates en</span>
+              <span class="file-size">2mb</span>
+            </div>
+          </a>
+        </li>
+        <li class="resource">
+          <a href="#" class="link" download>
+            <div class="pdf-icon">
+              <div class="capture">Pdf</div>
+              <div class="download-icon">
+                <img src="./images/icons/download-icon.svg" alt="Download">
+              </div>
+            </div>
+            <div class="text">
+              <span class="filename">Polityka jakości KOMARKO</span>
+              <span class="file-size">2mb</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer page-footer">
+    <div class="container">
+      <div class="footer-heading">
+        <div class="logo">
+          <img src="./images/logos/white-logo.svg" alt="Komarko">
+        </div>
+        <div class="buttons">
+          <button class="button button-white">Konfigurator produktu</button>
+          <button class="button button-white">Zaloguj</button>
+        </div>
+      </div>
+      <div class="footer-information">
+        <div class="links">
+          <ul class="links-list">
+            <li class="link title margin-bottom">O nas</li>
+            <li class="link"><a href="#">Historia</a></li>
+            <li class="link"><a href="#">Misja </a></li>
+            <li class="link margin-bottom"><a href="#">Cele</a></li>
+            <li class="link title"><a href="#">Jakośc</a></li>
+            <li class="link title"><a href="#">Oferta</a></li>
+            <li class="link title"><a href="#">Aktualności</a></li>
+            <li class="link title"><a href="#">Kariera</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Projekty Badawcze</a></li>
+            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="#">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
+            <li class="link"><a href="#">Lokale</a></li>
+            <li class="link"><a href="#">Działki</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">Usługi</li>
+            <li class="link"><a href="#">Proszk</a></li>
+            <li class="link"><a href="#">Granulaty</a></li>
+            <li class="link"><a href="#">Mikrogranulaty</a></li>
+            <li class="link"><a href="#">Tabletki</a></li>
+            <li class="link"><a href="#">Kapsułki</a></li>
+            <li class="link"><a href="#">Saszetki</a></li>
+            <li class="link"><a href="#">Konfekcja</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <span class="link title margin-bottom">Kontakt</span>
+          <p class="text">
+            KOMARKO Sp. z o.o.
+            <br>
+            05-850 Ożarów Mazowiecki
+            <br>
+            ul. Kierbedzia 8
+            <br>
+            skrytka pocztowa nr 68
+          </p>
+          <p class="text">
+            +48 22 722 42 56
+            <br>
+            +48 22 722 38 89
+            <br>
+            komarko@komarko.pl
+          </p>
+          <ul class="socials">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/shapeParalax.js"></script>
+  <script src="./js/sectionsNavigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.secondary-page-hero.offers-page {
+  position: relative;
+  z-index: 2;
+
+  .hero-section-img {
+    padding-top: 0;
+    background-image: url('../images/offers-page/hero-bg.png');
+  
+    .white-arrow-down {
+      display: none;
+    }
+  }
+}
+
+.offers-page {
+  .sections-navigation {
+    position: relative;
+    z-index: 2;
+  
+    &.fixed {
+      position: fixed
+    }
+  }
+
+  .resources-section {
+    margin-top: 90px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-top: 0;
+    }
+  }
+}
+
+@import 'page-sections';
