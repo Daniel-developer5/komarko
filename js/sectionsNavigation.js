@@ -23,7 +23,7 @@ $(() => {
     const { scrollY } = window
 
     getSectionsTop().forEach((top, index) => {
-      if (scrollY >= calcTop(top)) {
+      if (scrollY >= calcTop(top) - 1) {
         links.removeClass('active')
         links.eq(index).addClass('active')
       }
@@ -47,10 +47,9 @@ $(() => {
   links.click(function (e) {
     e.preventDefault()
 
-    links.removeClass('active')
-    $(this).addClass('active')
-
-    window.scroll(0, calcTop($($(this).attr('href')).offset().top))
+    $('html').animate({
+      scrollTop: calcTop($($(this).attr('href')).offset().top),
+    }, 300)
   })
 
   $(window).on('load', () => {

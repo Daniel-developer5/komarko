@@ -1,0 +1,93 @@
+.resources-section {
+  padding: 0 64px 90px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  .container {
+    .resources-list {
+      padding: 40px 0;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 60px;
+      border-top: 1px solid rgba($color: $color-black, $alpha: 0.2);
+      border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.2);
+
+      @media (max-width: $breakpoint-laptop) {
+        gap: 24px;
+      }
+    
+      @media (max-width: $breakpoint-tablet) {
+        gap: 24px;
+        grid-auto-flow: row;
+      }
+
+      .resource {
+        .link {
+          display: flex;
+
+          &:hover {
+            .pdf-icon {
+              color: $color-purple;
+              border-color: $color-purple;
+
+              .download-icon {
+                background-color: $color-purple;
+              }
+            }
+          }
+
+          .pdf-icon {
+            @extend %full-center;
+            position: relative;
+            margin-right: 20px;
+            min-width: 80px;
+            height: 80px;
+            border: 3px solid $color-secondary-gray;
+            border-radius: 18px;
+            font-family: 'Rajdhani', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            color: $color-black;
+            text-transform: uppercase;
+            transition: ease 0.3s;
+
+            @media (max-width: $breakpoint-laptop) {
+              min-width: 60px;
+              height: 60px;
+            }
+
+            .download-icon {
+              @extend %full-center;
+              width: 26px;
+              height: 26px;
+              position: absolute;
+              right: -3px;
+              bottom: -3px;
+              border-radius: 10px 0;
+              background-color: $color-blue;
+              transition: ease 0.3s;
+            }
+          }
+
+          .text {
+            @extend %text-button;
+            display: flex;
+            flex-direction: column;
+            padding-top: 4px;
+            color: $color-black;
+            text-transform: capitalize;
+
+            .file-size {
+              margin-top: 2px;
+              color: $color-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

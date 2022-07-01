@@ -182,13 +182,13 @@
 }
 
 
-@mixin blue-square-bg {
+@mixin blue-square-bg($top: 35%) {
   &:after {
     content: '';
     position: absolute;
     z-index: 0;
     width: 100vw;
-    top: 35%;
+    top: $top;
     right: -15vw;
     height: 720px;
     border-radius: 25px;

@@ -80,6 +80,11 @@
   padding: 0 64px;
   background-color: $color-secondary-dark-blue;
   z-index: 100;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     padding: 0 16px;     
@@ -103,7 +108,8 @@
       display: flex;
 
       .link {
-        display: block;
+        @extend %vertical-center;
+        height: 100%;
         padding: 28px 32px;
         font-family: 'Rajdhani', sans-serif;
         font-style: normal;

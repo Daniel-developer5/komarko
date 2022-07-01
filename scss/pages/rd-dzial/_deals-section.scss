@@ -1,0 +1,34 @@
+.deals-section {
+  @include blue-square-bg(23%);
+  padding: 60px 64px 90px;
+  position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;     
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    > .title {
+      @extend %text-h2;
+      margin-bottom: 44px;
+      color: $color-black;
+    }
+
+    .text-items .text-img-block {
+      &:not(:first-child) {
+        padding-top: 100px;
+
+        @media (max-width: $breakpoint-tablet) {
+          padding-top: 36px;
+        }
+      }
+    }
+  }
+}

@@ -35,12 +35,16 @@ html.overflow, body.overflow {
 
         &:not(.button) {
           color: $color-black;
+
+          &:hover, &.active {
+            color: $color-blue;
+          }
         }
       }
 
       .search-btn, .in-btn {
         svg path {
-          fill: $color-black;
+          fill: $color-black !important;
         }
       }
 
@@ -157,6 +161,13 @@ html.overflow, body.overflow {
         a {
           @extend %text-button;
           @extend %vertical-center;
+          transition: ease 0.3s;
+
+          &:not(.button) {
+            &:hover, &.active {
+              color: $color-blue;
+            }
+          }
         }
       }
     }
@@ -172,6 +183,10 @@ html.overflow, body.overflow {
         min-height: 44px;
         width: 44px;
         height: 44px;
+
+        svg path {
+          transition: ease 0.3s;
+        }
       }
 
       .login-btn {
@@ -184,6 +199,17 @@ html.overflow, body.overflow {
         height: 36px;
         overflow: hidden;
         border-radius: 50%;
+      }
+
+      .in-btn {
+        &:hover svg path {
+          fill: $color-blue !important;
+        }
+
+        svg path {
+          transition: ease 0.3s;
+          fill: $color-white;
+        }
       }
     }
 

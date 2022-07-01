@@ -1,0 +1,28 @@
+.rd-dzial .hero-section-img .text-box {
+  .deals-list {
+    @extend %text-body-small;
+    margin-top: 20px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 72px;
+    list-style-type: disc;
+    color: $color-white;
+
+    @media (max-width: $breakpoint-laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 36px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    .deal {
+      .sub-deal {
+        list-style-type: disc;
+      }
+    }
+  }
+}
