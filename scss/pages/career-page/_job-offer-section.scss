@@ -1,0 +1,214 @@
+.job-offer-section {
+  position: relative;
+  padding: 40px 64px 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    .title-box {
+      max-width: 800px;
+      margin-bottom: 60px;
+
+      .title {
+        @extend %text-h2;
+        margin-bottom: 24px;
+        color: $color-black;
+      }
+
+      .text {
+        @extend %text-h4;
+        margin-bottom: 24px;
+        color: $color-black;
+        font-weight: 400;
+
+        .link {
+          color: $color-blue;
+        }
+      }
+
+      .small-text {
+        @extend %text-body-small;
+        color: $color-black;
+      }
+    }
+
+    .career-info {
+      display: flex;
+
+      .links-side {
+        min-width: 440px;
+        padding: 46px 60px 24px 0;
+        position: relative;
+        background-color: $color-secondary-sky;
+        border-top-right-radius: 40px;
+
+        @media (max-width: $breakpoint-desktop) {
+          min-width: 300px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100vw;
+          right: 40px;
+          background-color: inherit;
+          z-index: 2;
+        }
+
+        .links-list {
+          position: relative;
+          z-index: 3;
+
+          .link {
+            @extend %vertical-center;
+            justify-content: space-between;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba($color: #000, $alpha: 0.15);
+
+            &:hover {
+              .text {
+                color: $color-blue;
+              }
+
+              svg path {
+                fill: $color-blue;
+              }
+            }
+          }
+
+          .text {
+            @extend %text-body-medium;
+            display: block;
+            max-width: 200px;
+            transition: ease 0.3s;
+          }
+
+          svg path {
+            transition: ease 0.3s;
+          }
+        }
+      }
+
+      .text-side {
+        padding: 70px 0 80px 60px;
+
+        .tabs-wrapper {
+          padding-bottom: 30px;
+          border-bottom: 1px solid rgba($color: #000, $alpha: 0.15);
+
+          .tab-buttons {
+            margin-bottom: 34px;
+            border-bottom: 1px solid rgba($color: #000, $alpha: 0.15);
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          .tabs {
+            display: inline-grid;
+            grid-auto-flow: column;
+            gap: 60px;
+
+            .tab-item {
+              @extend %text-button;
+              padding-bottom: 16px;
+              font-weight: 600;
+              color: $color-black;
+              transition: ease 0.3s;
+              cursor: pointer;
+
+              &:hover, &.active {
+                color: $color-blue;
+              }
+            }
+          }
+
+          .tabs-content {
+            position: relative;
+
+            .tab {
+              color: $color-black;
+              opacity: 1;
+
+              &:not(.active) {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+              }
+
+              .title {
+                @extend %text-body-medium;
+                margin-bottom: 14px;
+              }
+
+              .mb {
+                margin-bottom: 28px;
+              }
+
+              .small-title {
+                @extend %text-body-small;
+                display: block;
+                font-weight: 700;
+                margin-bottom: 12px;
+              }
+
+              .text {
+                @extend %text-body-small;
+              }
+
+              .list {
+                margin-left: 6px;
+                list-style-type: '- ';
+              }
+            }
+          }
+        }
+
+        .form-wrapper {
+          padding-top: 28px;
+
+          .title {
+            @extend %text-body-medium;
+            display: block;
+            margin-bottom: 28px;
+            color: $color-black;
+          }
+
+          .form {
+            display: grid;
+            gap: 16px;
+
+            .main-info {
+              display: flex;
+
+              .input-field {
+                width: 50%;
+
+                &:first-child {
+                  margin-right: 20px;
+                }
+              }
+            }
+
+            .button-box {
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

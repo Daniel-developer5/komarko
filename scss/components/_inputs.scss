@@ -1,0 +1,94 @@
+.input-field {
+  border: 2px solid $color-secondary-gray;
+  border-radius: 18px;
+  cursor: text;
+
+  .input-box {
+    padding: 14px 24px;
+    flex-grow: 1;
+  }
+
+  &.file {
+    display: flex;
+
+    .icon {
+      @extend %full-center;
+      width: 65px;
+      height: calc(100% + 4px);
+      border-radius: 18px 0;
+      background-color: $color-blue;
+      margin-top: -2px;
+      margin-right: -2px;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .placeholder {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Rajdhani", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  .input {
+    @extend %text-body-small;
+    width: 100%;
+    font-weight: 500;
+    color: $color-black;
+
+    &[readonly], &::-webkit-input-placeholder {
+      color: rgba($color: $color-black, $alpha: 0.6);
+    }
+
+    &[type=file] {
+      display: none;
+    }
+  }
+
+  .textarea {
+    resize: none;
+    height: 120px;
+  }
+}
+
+.checkbox-label {
+  @extend %text-body-ultra-small;
+  display: flex;
+  color: $color-black;
+
+  .default-checkbox {
+    display: none;
+  }
+
+  .custom-checkbox {
+    @extend %full-center;
+    margin-right: 8px;
+    min-width: 25px;
+    height: 25px;
+    border: 2px solid $color-secondary-gray;
+    border-radius: 7px;
+    transition: ease 0.3s;
+
+    &.checked {
+      border-color: $color-purple;
+      background-color: $color-purple;
+
+      .icon {
+        opacity: 1;
+      }
+    }
+
+    .icon {
+      opacity: 0;
+      transition: ease 0.3s;
+    }
+  }
+}

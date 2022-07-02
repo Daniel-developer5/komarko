@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <title>Komarko</title>
+</head>
+<body>
+  <header class="navigation light">
+    <div class="container xl">
+      <div class="logo">
+        <a href="/">
+          <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+          <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
+        </a>
+        <p class="text">
+          twój partner w produkcji kontraktowej
+        </p>
+      </div>
+      <ul class="navigation-links">
+        <li class="navigation-link">
+          <a href="/o-nas.html">O nas</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">R & D</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Oferta</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Aktualności</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kariera</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#">Kontakt</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#" class="button button-blue">Konfigurator produktu</a>
+        </li>
+      </ul>
+      <div class="additional-buttons">
+        <button class="search-btn button button-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.639" height="17.634" viewBox="0 0 17.639 17.634">
+            <path id="Path_12" data-name="Path 12" d="M14541.443,9836.052l-2.963-2.962a7.97,7.97,0,1,1,1.609-1.607l2.961,2.959a1.138,1.138,0,0,1-1.607,1.61Zm-13.416-9.339a5.684,5.684,0,0,0,9.631,4.1c.024-.027.046-.054.072-.08a.962.962,0,0,1,.081-.073,5.687,5.687,0,1,0-9.784-3.943Z" transform="translate(-14525.748 -9818.75)" fill="#fff"/>
+          </svg>
+        </button>
+        <button class="login-btn button button-white">Zaloguj</button>
+        <button class="lang-btn">
+          <img src="./images/icons/en-lang.svg" alt="English">
+        </button>
+        <a href="#" class="in-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
+            <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M4.29,19.166H.317V6.37H4.29ZM2.3,4.625A2.312,2.312,0,1,1,4.6,2.3,2.321,2.321,0,0,1,2.3,4.625ZM19.162,19.166H15.2V12.937c0-1.485-.03-3.388-2.066-3.388-2.066,0-2.382,1.613-2.382,3.281v6.336H6.779V6.37H10.59V8.116h.056a4.175,4.175,0,0,1,3.76-2.066c4.021,0,4.761,2.648,4.761,6.088v7.029Z" transform="translate(0 -0.001)" fill="#fff"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="/o-nas.html">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="#" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Jakość</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white mobile-nav">Zaloguj</button>
+          <button class="search-btn button button-white mobile-nav">
+            <img src="./images/icons/search.svg" alt="search">
+          </button>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="secondary-page-hero career-page">
+    <div class="sub-page-banner">
+      <div class="container xl">
+        <div class="text">
+          <a href="/" class="main-page-text">Strona główna</a>
+          <span class="line">/</span>
+          <span class="current-page-text">Kariera</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section-img">
+      <div class="text-box">
+        <a href="#deals-section" class="white-arrow-down">
+          <img src="./images/icons/white-arrow-down.svg" alt="Down">
+        </a>
+        <div class="container slide-up">
+          <span class="eyebrow">Kariera</span>
+          <h3 class="title">
+            Zostań <span class="text-bold underlined-text">częścią naszego</span><br>
+            wspólnego <span class="text-bold underlined-text">sukcesu!</span>
+          </h3>
+          <p class="text">
+            Jeżeli zależy Ci by pracować w szybko rozwijającej się firmie, z polskim kapitałem, jesteś zaangażowany, kreatywny, nie boisz się wyzwań i chciałbyś zostać cześcią naszego zespołu, wyślij nam swoją aplikację.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="job-offer-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">Oferty pracy</h2>
+        <h4 class="text">
+          Jeżeli aktualnie nie prowadzimy rekrutacji na interesujące Cię stanowisko, 
+          a chciałbyś pracować w KOMARKO Sp.z o.o., wyślij nam swoje cv na adres: <a href="mailto:praca@komarko.pl" class="link">praca@komarko.pl</a>
+        </h4>
+        <p class="small-text">
+          W tytule maila wpisz proszę stanowisko, którym jesteś zainteresowany
+        </p>
+      </div>
+      <div class="career-info">
+        <div class="links-side">
+          <ul class="links-list">
+            <li>
+              <a href="#" class="link">
+                <span class="text">Nazwa stanowiska lorem ipsum dolor sit empersiva</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.687" height="14.172" viewBox="0 0 21.687 14.172">
+                  <path id="Path_102" data-name="Path 102" d="M16309.655,9864.17a.581.581,0,0,1-.4-.164.6.6,0,0,1,0-.824l5.513-5.521h-19.189a.58.58,0,0,1,0-1.159h19.2l-5.512-5.522a.59.59,0,0,1,0-.819.557.557,0,0,1,.4-.162.545.545,0,0,1,.4.175l6.465,6.509a.592.592,0,0,1,.164.406.507.507,0,0,1-.043.218.726.726,0,0,1-.124.194l-6.452,6.5A.573.573,0,0,1,16309.655,9864.17Z" transform="translate(-16294.998 -9849.998)" fill="#c5c5c5"/>
+                </svg>                
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link">
+                <span class="text">Nazwa stanowiska lorem ipsum dolor sit empersiva</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.687" height="14.172" viewBox="0 0 21.687 14.172">
+                  <path id="Path_102" data-name="Path 102" d="M16309.655,9864.17a.581.581,0,0,1-.4-.164.6.6,0,0,1,0-.824l5.513-5.521h-19.189a.58.58,0,0,1,0-1.159h19.2l-5.512-5.522a.59.59,0,0,1,0-.819.557.557,0,0,1,.4-.162.545.545,0,0,1,.4.175l6.465,6.509a.592.592,0,0,1,.164.406.507.507,0,0,1-.043.218.726.726,0,0,1-.124.194l-6.452,6.5A.573.573,0,0,1,16309.655,9864.17Z" transform="translate(-16294.998 -9849.998)" fill="#c5c5c5"/>
+                </svg>                
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link">
+                <span class="text">Nazwa stanowiska lorem ipsum dolor sit empersiva</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.687" height="14.172" viewBox="0 0 21.687 14.172">
+                  <path id="Path_102" data-name="Path 102" d="M16309.655,9864.17a.581.581,0,0,1-.4-.164.6.6,0,0,1,0-.824l5.513-5.521h-19.189a.58.58,0,0,1,0-1.159h19.2l-5.512-5.522a.59.59,0,0,1,0-.819.557.557,0,0,1,.4-.162.545.545,0,0,1,.4.175l6.465,6.509a.592.592,0,0,1,.164.406.507.507,0,0,1-.043.218.726.726,0,0,1-.124.194l-6.452,6.5A.573.573,0,0,1,16309.655,9864.17Z" transform="translate(-16294.998 -9849.998)" fill="#c5c5c5"/>
+                </svg>                
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link">
+                <span class="text">Nazwa stanowiska lorem ipsum dolor sit empersiva</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.687" height="14.172" viewBox="0 0 21.687 14.172">
+                  <path id="Path_102" data-name="Path 102" d="M16309.655,9864.17a.581.581,0,0,1-.4-.164.6.6,0,0,1,0-.824l5.513-5.521h-19.189a.58.58,0,0,1,0-1.159h19.2l-5.512-5.522a.59.59,0,0,1,0-.819.557.557,0,0,1,.4-.162.545.545,0,0,1,.4.175l6.465,6.509a.592.592,0,0,1,.164.406.507.507,0,0,1-.043.218.726.726,0,0,1-.124.194l-6.452,6.5A.573.573,0,0,1,16309.655,9864.17Z" transform="translate(-16294.998 -9849.998)" fill="#c5c5c5"/>
+                </svg>                
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-side">
+          <div class="tabs-wrapper">
+            <div class="tab-buttons">
+              <ul class="tabs">
+                <li class="tab-item active">Opis stanowiska</li>
+                <li class="tab-item">Wymagania</li>
+                <li class="tab-item">Oferujemy</li>
+              </ul>
+            </div>
+            <div class="tabs-content">
+              <div class="tab active">
+                <p class="title">SALES MANAGER usług</p>
+                <p class="text mb">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh. Ut vitae maximus libero, eget tincidunt libero. Praesent tempus congue mauris et rhoncus. Quisque ipsum ante, convallis a lobortis nec, congue ut nisi.
+                </p>
+                <span class="small-title">Obowiązki</span>
+                <ul class="text list">
+                  <li>opracowywanie baz danych celem bezpośredniego kontaktu z potencjalnymi zamawiającymi imprezy</li>
+                  <li>budowanie relacji biznesowych lokalnych i ogólnopolskich</li>
+                  <li>udział w opracowywaniu pakietów i ofert sprzedażowych</li>
+                  <li>udział w procesie tworzenia strategii handlowej projektu</li>
+                  <li>koordynacja prac związanych z budowaniem zespołu firm współpracujących (agencje, artyści, podwykonawcy)</li>
+                  <li>aktywne poszukiwanie firm / podmiotów chętnych na organizację imprez / eventów / wydarzeń</li>
+                  <li>kreatywne tworzenie nowych płaszczyzn prezentacji lokalu</li>
+                </ul>
+              </div>
+              <div class="tab">
+                <p class="title">Wymagania</p>
+                <p class="text mb">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh. Ut vitae maximus libero, eget tincidunt libero. Praesent tempus congue mauris et rhoncus. Quisque ipsum ante, convallis a lobortis nec, congue ut nisi.
+                </p>
+                <span class="small-title">Obowiązki</span>
+                <ul class="text list">
+                  <li>opracowywanie baz danych celem bezpośredniego kontaktu z potencjalnymi zamawiającymi imprezy</li>
+                  <li>budowanie relacji biznesowych lokalnych i ogólnopolskich</li>
+                  <li>udział w opracowywaniu pakietów i ofert sprzedażowych</li>
+                  <li>udział w procesie tworzenia strategii handlowej projektu</li>
+                  <li>koordynacja prac związanych z budowaniem zespołu firm współpracujących (agencje, artyści, podwykonawcy)</li>
+                  <li>aktywne poszukiwanie firm / podmiotów chętnych na organizację imprez / eventów / wydarzeń</li>
+                  <li>kreatywne tworzenie nowych płaszczyzn prezentacji lokalu</li>
+                </ul>
+              </div>
+              <div class="tab">
+                <p class="title">Oferujemy</p>
+                <p class="text mb">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh. Ut vitae maximus libero, eget tincidunt libero. Praesent tempus congue mauris et rhoncus. Quisque ipsum ante, convallis a lobortis nec, congue ut nisi.
+                </p>
+                <span class="small-title">Obowiązki</span>
+                <ul class="text list">
+                  <li>opracowywanie baz danych celem bezpośredniego kontaktu z potencjalnymi zamawiającymi imprezy</li>
+                  <li>budowanie relacji biznesowych lokalnych i ogólnopolskich</li>
+                  <li>udział w opracowywaniu pakietów i ofert sprzedażowych</li>
+                  <li>udział w procesie tworzenia strategii handlowej projektu</li>
+                  <li>koordynacja prac związanych z budowaniem zespołu firm współpracujących (agencje, artyści, podwykonawcy)</li>
+                  <li>aktywne poszukiwanie firm / podmiotów chętnych na organizację imprez / eventów / wydarzeń</li>
+                  <li>kreatywne tworzenie nowych płaszczyzn prezentacji lokalu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <span class="title">Aplukuj</span>
+            <form class="form">
+              <div class="main-info">
+                <div class="input-field">
+                  <div class="input-box">
+                    <span class="placeholder">IMIE i NAZWISKO</span>
+                    <input type="text" class="input" />
+                  </div>
+                </div>
+                <div class="input-field">
+                  <div class="input-box">
+                    <span class="placeholder">Email</span>
+                    <input type="email" class="input" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-field file">
+                <div class="input-box">
+                  <span class="placeholder">Twoje CV</span>
+                  <input type="text" class="input" value="kliknij aby wybrać plik" readonly />
+                  <input type="file" class="input file-input" />
+                </div>
+                <div class="icon">
+                  <img src="./images/icons/download-icon.svg" alt="Download">
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-box">
+                  <span class="placeholder">Dodatkowe infomace</span>
+                  <textarea class="input textarea" placeholder="Wpisz dodatkowe informacje"></textarea>
+                </div>
+              </div>
+              <div class="checkbox-label">
+                <div class="custom-checkbox">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="13.126" height="9.789" viewBox="0 0 13.126 9.789">
+                    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M4.458,14.173.192,9.907a.656.656,0,0,1,0-.928l.928-.928a.656.656,0,0,1,.928,0l2.874,2.874,6.155-6.155a.656.656,0,0,1,.928,0l.928.928a.656.656,0,0,1,0,.928L5.386,14.173A.656.656,0,0,1,4.458,14.173Z" transform="translate(0 -4.577)" fill="#fff"/>
+                  </svg>                    
+                </div>
+                <input type="checkbox" class="default-checkbox" />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis
+              </div>
+              <div class="checkbox-label">
+                <div class="custom-checkbox">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="13.126" height="9.789" viewBox="0 0 13.126 9.789">
+                    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M4.458,14.173.192,9.907a.656.656,0,0,1,0-.928l.928-.928a.656.656,0,0,1,.928,0l2.874,2.874,6.155-6.155a.656.656,0,0,1,.928,0l.928.928a.656.656,0,0,1,0,.928L5.386,14.173A.656.656,0,0,1,4.458,14.173Z" transform="translate(0 -4.577)" fill="#fff"/>
+                  </svg>                    
+                </div>
+                <input type="checkbox" class="default-checkbox" />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis
+              </div>
+              <div class="button-box">
+                <button class="button button-blue" type="submit">wyślij wiadomość</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer page-footer">
+    <div class="container">
+      <div class="footer-heading">
+        <div class="logo">
+          <img src="./images/logos/white-logo.svg" alt="Komarko">
+        </div>
+        <div class="buttons">
+          <button class="button button-white">Konfigurator produktu</button>
+          <button class="button button-white">Zaloguj</button>
+        </div>
+      </div>
+      <div class="footer-information">
+        <div class="links">
+          <ul class="links-list">
+            <li class="link title margin-bottom">O nas</li>
+            <li class="link"><a href="#">Historia</a></li>
+            <li class="link"><a href="#">Misja </a></li>
+            <li class="link margin-bottom"><a href="#">Cele</a></li>
+            <li class="link title"><a href="#">Jakośc</a></li>
+            <li class="link title"><a href="#">Oferta</a></li>
+            <li class="link title"><a href="#">Aktualności</a></li>
+            <li class="link title"><a href="#">Kariera</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Projekty Badawcze</a></li>
+            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="#">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
+            <li class="link"><a href="#">Lokale</a></li>
+            <li class="link"><a href="#">Działki</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">Usługi</li>
+            <li class="link"><a href="#">Proszk</a></li>
+            <li class="link"><a href="#">Granulaty</a></li>
+            <li class="link"><a href="#">Mikrogranulaty</a></li>
+            <li class="link"><a href="#">Tabletki</a></li>
+            <li class="link"><a href="#">Kapsułki</a></li>
+            <li class="link"><a href="#">Saszetki</a></li>
+            <li class="link"><a href="#">Konfekcja</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <span class="link title margin-bottom">Kontakt</span>
+          <p class="text">
+            KOMARKO Sp. z o.o.
+            <br>
+            05-850 Ożarów Mazowiecki
+            <br>
+            ul. Kierbedzia 8
+            <br>
+            skrytka pocztowa nr 68
+          </p>
+          <p class="text">
+            +48 22 722 42 56
+            <br>
+            +48 22 722 38 89
+            <br>
+            komarko@komarko.pl
+          </p>
+          <ul class="socials">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/shapeParalax.js"></script>
+</body>
+</html>

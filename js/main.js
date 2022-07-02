@@ -129,4 +129,25 @@ $(() => {
     calcMobileNavProperties()
     calcPaddingTop()
   })
+
+  $('.input-field').click(function (e) {
+    if ($(e.target).hasClass('file-input')) {
+      return
+    }
+
+    if ($(this).hasClass('file')) {
+      $(this).find('.input[type=file]').click()
+      return
+    }
+
+    $(this).find('.input').focus()
+  })
+
+  $('.checkbox-label').click(function () {
+    const defaultCheck = $(this).find('.default-checkbox')
+
+    defaultCheck.prop('checked', !defaultCheck.prop('checked'))
+
+    $(this).find('.custom-checkbox').toggleClass('checked')
+  })
 })
