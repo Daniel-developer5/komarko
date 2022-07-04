@@ -8,7 +8,11 @@
   }
 
   .shape-paralax-item {
-    @include shape-paralax-pentagon();
+    @include shape-paralax-pentagon(8%);
+
+    @media (max-width: $breakpoint-laptop) {
+      display: none;
+    }
   }
 
   .container {
@@ -42,6 +46,10 @@
     .career-info {
       display: flex;
 
+      @media (max-width: $breakpoint-laptop) {
+        flex-direction: column;
+      }
+
       .links-side {
         min-width: 440px;
         padding: 46px 60px 24px 0;
@@ -51,6 +59,13 @@
 
         @media (max-width: $breakpoint-desktop) {
           min-width: 300px;
+        }
+
+        @media (max-width: $breakpoint-laptop) {
+          width: 100%;
+          min-width: auto;
+          padding: 36px;
+          padding-top: 20px;
         }
 
         &:after {
@@ -74,6 +89,10 @@
             padding: 24px 0;
             border-bottom: 1px solid rgba($color: #000, $alpha: 0.15);
 
+            @media (max-width: $breakpoint-laptop) {
+              padding: 16px 0;
+            }
+
             &:hover {
               .text {
                 color: $color-blue;
@@ -90,6 +109,10 @@
             display: block;
             max-width: 200px;
             transition: ease 0.3s;
+
+            @media (max-width: $breakpoint-laptop) {
+              max-width: 100%;
+            }
           }
 
           svg path {
@@ -100,6 +123,10 @@
 
       .text-side {
         padding: 70px 0 80px 60px;
+
+        @media (max-width: $breakpoint-laptop) {
+          padding: 36px 0;
+        }
 
         .tabs-wrapper {
           padding-bottom: 30px;
@@ -127,6 +154,7 @@
               color: $color-black;
               transition: ease 0.3s;
               cursor: pointer;
+              white-space: nowrap;
 
               &:hover, &.active {
                 color: $color-blue;
@@ -136,6 +164,7 @@
 
           .tabs-content {
             position: relative;
+            transition: ease 0.3s;
 
             .tab {
               color: $color-black;

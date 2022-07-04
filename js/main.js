@@ -150,4 +150,31 @@ $(() => {
 
     $(this).find('.custom-checkbox').toggleClass('checked')
   })
+
+  $('.file-input').on('change', function () {
+    const file = $(this).prop('files')[0]
+
+    $(this).parent().find('.input[type=text]').val(file.name)
+  })
+
+  const onStateChange = (input, focused) => {
+    $(input).closest('.input-field')[focused ? 'addClass' : 'removeClass']('focus')
+  }
+
+  $('.input').on('focus', e => onStateChange(e.target, true))
+  $('.input').on('blur', e => onStateChange(e.target))
+
+  const tabBtns = $('.job-offer-section .tab-buttons .tab-item')
+  const tabContents = $('.job-offer-section .tabs-content .tab')
+
+  tabBtns.click(function () {
+    tabBtns.removeClass('active')
+    $(this).addClass('active')
+
+    tabContents.removeClass('active')
+    const currentTab = tabContents.eq($(this).index())
+    currentTab.addClass('active')
+
+    $('.job-offer-section .tabs-content').css('min-height', currentTab.height())
+  })
 })

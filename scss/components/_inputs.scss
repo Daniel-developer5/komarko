@@ -3,6 +3,10 @@
   border-radius: 18px;
   cursor: text;
 
+  &.focus {
+    border-color: $color-blue;
+  }
+
   .input-box {
     padding: 14px 24px;
     flex-grow: 1;
@@ -75,7 +79,6 @@
     height: 25px;
     border: 2px solid $color-secondary-gray;
     border-radius: 7px;
-    transition: ease 0.3s;
 
     &.checked {
       border-color: $color-purple;
