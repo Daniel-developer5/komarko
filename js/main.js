@@ -26,6 +26,16 @@ $(() => {
     }
   })
 
+  $('.navigation .navigation-link').on('mouseover', function () {
+    $(this).addClass('active')
+    $(this).find('.dropdown').addClass('show')
+  })
+
+  $('.navigation .navigation-link').on('mouseout', function () {
+    $(this).find('.dropdown').removeClass('show')
+    $(this).removeClass('active')
+  })
+
   const calcMobileNavProperties = () => {
     const navHeight = $('.navigation').outerHeight()
     const sectionsNavHeight = $('.sections-navigation.fixed').outerHeight()

@@ -157,6 +157,13 @@ html.overflow, body.overflow {
 
       .navigation-link {
         display: flex;
+        position: relative;
+
+        &.active {
+          a {
+            color: $color-blue;
+          }
+        }
 
         a {
           @extend %text-button;
@@ -166,6 +173,79 @@ html.overflow, body.overflow {
           &:not(.button) {
             &:hover, &.active {
               color: $color-blue;
+            }
+          }
+        }
+
+        &.dropdown-trigger.active {
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            bottom: 0;
+            left: -20px;
+            z-index: 1;
+          }
+
+          > a {
+            position: relative;
+            z-index: 2;
+          }
+        }
+
+        .dropdown {
+          @extend %text-body-ultra-small;
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: -12px;
+          padding: 26px;
+          border-radius: 14px;
+          box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.102);
+          color: $color-black;
+          background-color: $color-white;
+          width: 300px;
+
+          &.show {
+            display: block;
+          }
+
+          .icon {
+            position: absolute;
+            top: -12px;
+          }
+
+          a {
+            color: $color-black;
+
+            &:hover {
+              color: $color-blue;
+            }
+          }
+
+          .links {
+            display: grid;
+            gap: 13px;
+            padding-left: 16px;
+            border-left: 3px solid $color-blue;
+            margin-bottom: 20px;
+
+            a {
+              text-transform: uppercase;
+            }
+          }
+
+          .sub-links {
+            margin-left: 16px;
+            padding-left: 16px;
+            display: grid;
+            gap: 8px;
+            border-left: 3px solid $color-secondary-gray;
+
+            a {
+              text-transform: capitalize;
+              font-weight: 400;
             }
           }
         }
@@ -329,6 +409,8 @@ html.overflow, body.overflow {
       grid-auto-flow: row;
 
       .navigation-link {
+        position: relative;
+
         > a {
           font-family: 'Rajdhani', sans-serif;
           font-style: normal;
