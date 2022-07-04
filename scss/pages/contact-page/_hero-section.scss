@@ -1,0 +1,36 @@
+.contact-page .secondary-page-hero .text-box {
+  .contact-items {
+    margin-top: 20px;
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 60px;
+
+    @media (max-width: $breakpoint-laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: row;
+      gap: 24px;
+      column-gap: 60px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 24px;
+    }
+
+    .item-text {
+      @extend %text-body-small;
+      max-width: 165px;
+      color: $color-white;
+    }
+
+    .socials {
+      display: inline-grid;
+      grid-auto-flow: column;
+      gap: 12px;
+
+      .social-link {
+        @extend %vertical-center;
+      }
+    }
+  }
+}

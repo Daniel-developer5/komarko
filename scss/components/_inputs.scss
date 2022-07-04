@@ -1,6 +1,7 @@
 .input-field {
   border: 2px solid $color-secondary-gray;
   border-radius: 18px;
+  background-color: $color-white;
   cursor: text;
 
   &.focus {
@@ -79,6 +80,7 @@
     height: 25px;
     border: 2px solid $color-secondary-gray;
     border-radius: 7px;
+    background-color: $color-white;
 
     &.checked {
       border-color: $color-purple;

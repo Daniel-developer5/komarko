@@ -1,0 +1,106 @@
+.contact-section {
+  position: relative;
+  padding: 52px 64px 36px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 75%;
+    bottom: 0;
+    left: 12%;
+    width: 100vw;
+    background-color: $color-secondary-sky;
+    border-top-left-radius: 40px;
+
+    @media (max-width: $breakpoint-desktop-xl) {
+      left: 3%;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      left: 0;
+      border-radius: 0;
+    }
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+    > .title {
+      @extend %text-h2;
+      margin-bottom: 34px;
+      color: $color-black;
+    }
+
+    .phones {
+      display: flex;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;   
+      }
+
+      .phone {
+        @extend %vertical-center;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 36px 24px 90px;
+        color: $color-black;
+
+        @media (max-width: $breakpoint-tablet) {
+          padding: 24px;
+        }
+
+        &.left-phone {
+          padding-top: 0;
+          border-right: 1px solid rgba($color: $color-black, $alpha: 0.15);
+
+          @media (max-width: $breakpoint-tablet) {
+            border-right: none;
+            border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.15);
+          }
+        }
+
+        .title {
+          @extend %text-subtitle;
+          margin-bottom: 24px;
+        }
+
+        .name {
+          @extend %text-body-medium;
+          margin-bottom: 18px;
+        }
+
+        .number {
+          @extend %text-h4;
+          margin-bottom: 6px;
+        }
+
+        .link {
+          @extend %text-body-small;
+          color: $color-blue;
+        }
+      }
+    }
+
+    .map {
+      iframe, .g-map-canvas {
+        width: 100%;
+        height: 540px;
+        border-radius: 25px;
+        overflow: hidden;
+
+        @media (max-width: $breakpoint-tablet) {
+          height: 300px;
+        }
+      }
+    }
+  }
+}

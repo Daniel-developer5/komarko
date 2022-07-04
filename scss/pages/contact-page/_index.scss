@@ -1,0 +1,8 @@
+.secondary-page-hero.contact .hero-section-img {
+  background-image: url('../images/contact-page/hero-bg.jpg');
+  background-position: center
+}
+
+@import 'hero-section';
+@import 'contact-section';
+@import 'form-section';

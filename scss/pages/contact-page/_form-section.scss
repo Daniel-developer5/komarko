@@ -1,0 +1,70 @@
+.form-section {
+  padding: 36px 64px 45px;
+  position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+    padding-top: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12%;
+    width: 100vw;
+    background-color: $color-secondary-sky;
+
+    @media (max-width: $breakpoint-desktop-xl) {
+      left: 3%;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      left: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+    .title {
+      @extend %text-h2;
+      margin-bottom: 45px;
+      color: $color-black;
+    }
+
+    .form {
+      display: grid;
+      gap: 16px;
+
+      .main-info {
+        display: flex;
+
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column;
+        }
+
+        .input-field {
+          flex-grow: 1;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+
+            @media (max-width: $breakpoint-tablet) {
+              margin-right: 0;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      .button-box {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+    }
+  }
+}

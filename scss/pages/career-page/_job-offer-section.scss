@@ -221,11 +221,24 @@
             .main-info {
               display: flex;
 
+              @media (max-width: $breakpoint-tablet) {
+                flex-direction: column;
+              }
+
               .input-field {
                 width: 50%;
 
+                @media (max-width: $breakpoint-tablet) {
+                  width: 100%;
+                }                
+
                 &:first-child {
                   margin-right: 20px;
+
+                  @media (max-width: $breakpoint-tablet) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                  }
                 }
               }
             }
