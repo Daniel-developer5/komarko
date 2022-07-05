@@ -13,7 +13,7 @@ html.overflow, body.overflow {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   transition: ease 0.3s;
 
   &.light {
@@ -263,6 +263,10 @@ html.overflow, body.overflow {
         min-height: 44px;
         width: 44px;
         height: 44px;
+        
+        &:hover {
+          background-color: transparent;
+        }
 
         svg path {
           transition: ease 0.3s;

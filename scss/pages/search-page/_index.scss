@@ -1,0 +1,204 @@
+.search-page {
+  .search-block {
+    padding: 115px 64px 65px;
+    background: linear-gradient(to bottom, $color-secondary-sky 80%, transparent 20%);
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 40px 16px;
+    }
+
+    .title {
+      @extend %text-h2;
+      margin-bottom: 102px;
+      color: $color-black;
+      text-align: center;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .search-form {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 20px 25px;
+      background-color: $color-blue;
+      border-radius: 25px;
+
+      .inner-wrap {
+        display: flex;
+        background-color: $color-white;
+        border-radius: 18px 0 18px 18px;
+        overflow: hidden;
+      }
+
+      .search-input {
+        @extend %text-body-small;
+        display: block;
+        flex-grow: 1;
+        padding: 20px 25px;
+        background-color: $color-white;
+        color: $color-black;
+      }
+
+      .search-button {
+        @extend %text-button;
+        @extend %vertical-center;
+        padding: 8px 30px;
+        background-color: $color-purple;
+        border-radius: 18px 0;
+        color: $color-white;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .search-results {
+    padding: 0 64px;
+    color: $color-black;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0 16px;
+    }
+
+    .highlight {
+      background-color: rgba($color: $color-blue, $alpha: 0.2);
+    }
+
+    .eyebrow {
+      @extend %text-button;
+      display: block;
+      margin-bottom: 10px;
+      color: $color-blue;
+    }
+
+    .results-text {
+      @extend %text-subtitle;
+    }
+
+    .no-results, .results {
+      margin-bottom: 80px;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .results {
+      .amount {
+        padding-bottom: 28px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.15);
+      }
+    }
+
+    .results-list {
+      padding-bottom: 68px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 28px;
+
+      @media (max-width: $breakpoint-laptop) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        padding-bottom: 40px;
+      }
+
+      .result-item {
+        > a {
+          display: block;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.15);
+        }
+
+        .eyebrow {
+          margin-bottom: 8px;
+        }
+
+        .title {
+          @extend %text-h4;
+          margin-bottom: 16px;
+        }
+
+        .text {
+          @extend %text-body-small;
+        }
+      }
+    }
+
+    .search-navigation-wrapper {
+      @extend %horizontal-center;
+
+      .search-navigation {
+        display: inline-grid;
+        grid-auto-flow: column;
+        gap: 36px;
+
+        @media (max-width: $breakpoint-tablet) {
+          gap: 16px;
+        }
+
+        .search-nav-item {
+          @extend %full-center;
+          @extend %text-h4;
+          width: 56px;
+          height: 56px;
+          color: rgba($color: $color-black, $alpha: 0.4);
+          line-height: 100%;
+          border-radius: 50%;
+          border: 2px solid $color-secondary-gray;
+          cursor: pointer;
+
+          @media (max-width: $breakpoint-tablet) {
+            width: 40px;
+            height: 40px;
+          }
+
+          &:hover, &.active {
+            border-color: $color-blue;
+            color: $color-blue;
+
+            &.arrow {
+              background-color: $color-blue;
+
+              svg path:last-child {
+                fill: $color-white;
+              }
+            }
+          }
+        }
+
+        .arrow {
+          &.arrow-left svg {
+            margin-right: 6px;
+          }
+
+          &.arrow-right svg {
+            margin-left: 6px;
+          }
+
+          svg path {
+            transition: ease 0.3s;
+
+            &:first-child {
+              fill: transparent;
+            }
+
+            &:last-child {
+              fill: $color-secondary-gray;
+            }
+          }
+        }
+
+        .page-numbers {
+          display: grid;
+          grid-auto-flow: column;
+          gap: 12px;
+        }
+      }
+    }
+  }
+}

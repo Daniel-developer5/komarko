@@ -51,6 +51,7 @@ $(() => {
 
   const calcPaddingTop = () => {
     $('.secondary-page-hero').css('padding-top', $('header.navigation').outerHeight())
+    $('.search-page .search-block').css('margin-top', $('header.navigation').outerHeight())
   }
 
   calcPaddingTop()

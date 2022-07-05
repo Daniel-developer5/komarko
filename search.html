@@ -17,7 +17,7 @@
   <link type="text/css" rel="stylesheet" href="./css/style.css">
   <title>Komarko</title>
 </head>
-<body>
+<body class="search-page">
   <header class="navigation light">
     <div class="container xl">
       <div class="logo">
@@ -155,180 +155,88 @@
       </div>
     </div>
   </header>
-  <section class="secondary-page-hero rd-dzial">
-    <div class="sub-page-banner">
-      <div class="container xl">
-        <div class="text">
-          <a href="/" class="main-page-text">Strona główna</a>
-          <span class="line">/</span>
-          <span class="current-page-text">Dział badawczo rozwojowy</span>
-        </div>
+  <div class="search-block">
+    <h2 class="title">Szukaj</h2>
+    <form class="search-form">
+      <div class="inner-wrap">
+        <input type="text" class="search-input" placeholder="Wpisz szukaną fraze" />
+        <button class="search-button">szukaj</button>
       </div>
-    </div>
-    <div class="hero-section-img">
-      <div class="text-box">
-        <a href="#deals-section" class="white-arrow-down">
-          <img src="./images/icons/white-arrow-down.svg" alt="Down">
-        </a>
-        <div class="container slide-up">
-          <span class="eyebrow">Dział badawczo rozwojowy</span>
-          <h3 class="title">
-            Działania, które podejmujemy<br>
-            <span class="text-bold underlined-text">w ramach R&D:</span>
-          </h3>
-          <ul class="deals-list">
-            <li class="deal">
-              pełny zakres prac związanych z procesem produkcyjnym oraz konfekcjonowaniem form płynnych i suchych;
-            </li>
-            <li class="deal">
-              naważanie według zleconej lub opracowanej przez naszych technologów receptury;
-            </li>
-            <li class="deal">
-              <ul class="sub-deals">
-                <li class="sub-deal">mieszanie lub homogenizowanie</li>
-                <li class="sub-deal">rozlew</li>
-                <li class="sub-deal">etykietowanie</li>
-              </ul>
-            </li>
-            <li class="deal">
-              <ul class="sub-deals">
-                <li class="sub-deal">pakowanie w opakowania zbiorcze</li>
-                <li class="sub-deal">produkcja w skali dostosowanej do potrzeb klienta</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+    </form>
+  </div>
+  <div class="search-results">
+    <div class="container">
+      <div class="no-results">
+        <span class="eyebrow">wyniki wyszukiwania</span>
+        <p class="results-text">
+          Nie znaleziono frazy. Wprowadź szukaną fraze ponownie.
+        </p>
       </div>
-    </div>
-  </section>
-  <div class="sections-navigation-trigger">
-    <div class="sections-navigation">
-      <div class="container">
-        <div class="arrow">
-          <img src="./images/icons/white-arrow-right.svg" alt="">
+      <div class="results">
+        <div class="amount">
+          <span class="eyebrow">wyniki wyszukiwania</span>
+          <p class="results-text">
+            Znalezione 20 fraz
+          </p>
         </div>
-        <ul class="links">
-          <li>
-            <a href="#deals-section" class="link active">Projekty Badawcze</a>
+        <ul class="results-list">
+          <li class="result-item">
+            <a href="#">
+              <span class="eyebrow">Strona</span>
+              <h4 class="title">W ramach kontraktowej produkcji <span class="highlight">oferujemy</span> możliwość indywidualnego doboru kształtu kapsułek.</h4>
+              <p class="text">Faktyczna ich wielkość zależy od rodzaju wypełnienia i jest ustalana <span class="highlight">indywidualnie</span> dla danego produktu.</p>
+            </a>
           </li>
-          <li>
-            <a href="#infrastructure-block" class="link">Infrastruktura badawcza</a>
+          <li class="result-item">
+            <a href="#">
+              <span class="eyebrow">Strona</span>
+              <h4 class="title">W ramach kontraktowej produkcji <span class="highlight">oferujemy</span> możliwość indywidualnego doboru kształtu kapsułek.</h4>
+              <p class="text">Faktyczna ich wielkość zależy od rodzaju wypełnienia i jest ustalana <span class="highlight">indywidualnie</span> dla danego produktu.</p>
+            </a>
           </li>
-          <li>
-            <a href="#science-block" class="link">Kadra Naukowa</a>
+          <li class="result-item">
+            <a href="#">
+              <span class="eyebrow">Strona</span>
+              <h4 class="title">W ramach kontraktowej produkcji <span class="highlight">oferujemy</span> możliwość indywidualnego doboru kształtu kapsułek.</h4>
+              <p class="text">Faktyczna ich wielkość zależy od rodzaju wypełnienia i jest ustalana <span class="highlight">indywidualnie</span> dla danego produktu.</p>
+            </a>
           </li>
-          <li>
-            <a href="#idea-block" class="link">Osiągnięcia</a>
+          <li class="result-item">
+            <a href="#">
+              <span class="eyebrow">Strona</span>
+              <h4 class="title">W ramach kontraktowej produkcji <span class="highlight">oferujemy</span> możliwość indywidualnego doboru kształtu kapsułek.</h4>
+              <p class="text">Faktyczna ich wielkość zależy od rodzaju wypełnienia i jest ustalana <span class="highlight">indywidualnie</span> dla danego produktu.</p>
+            </a>
           </li>
         </ul>
-      </div>
-    </div>
-  </div>
-  <div class="deals-section scroll-detect" id="deals-section">
-    <div class="shape-paralax-item">
-      <img src="./images/icons/pentagon.svg" alt="">
-    </div>
-    <div class="container">
-      <h2 class="title slide-up">Dział abadawczo rozwojowy</h2>
-      <div class="text-items">
-        <div class="text-img-block slide-up">
-          <div class="img-box">
-            <img src="./images/rd-dzial/projects.png" alt="Projekty Badawcze">
-          </div>
-          <div class="text-box">
-            <h4 class="title">Projekty Badawcze</h4>
-            <p class="text">
-              Czym zajmuje się dział R&D w Komarko?<br><br>
-              Jako Komarko prowadzimy działalność producenta kontraktowego. Pracujemy nad stałym poszerzaniem zespołu badawczego, wyposażeniem nowoczesnego zakładu produkcyjnego oraz stosowania innowacyjnych linii produkcyjnych. Efektem naszych działań jest dostosowanie się do potrzeb klienta.
-            </p>
-          </div>
-        </div>
-        <div class="text-img-block slide-up reverse scroll-detect" id="infrastructure-block">
-          <div class="img-box">
-            <img src="./images/rd-dzial/infrastructura.png" alt="Infrastruktura Badawcza">
-          </div>
-          <div class="text-box">
-            <h4 class="title">Infrastruktura Badawcza</h4>
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh. Ut vitae maximus libero, eget tincidunt libero. Praesent tempus congue mauris et rhoncus. Quisque ipsum ante, convallis a lobortis nec, congue ut nisi.
-            </p>
-          </div>
-        </div>
-        <div class="text-img-block slide-up scroll-detect" id="science-block">
-          <div class="img-box">
-            <img src="./images/rd-dzial/kadra.png" alt="Kadra Naukowa">
-          </div>
-          <div class="text-box">
-            <h4 class="title">Kadra Naukowa</h4>
-            <p class="text">
-              Kadra Komarko prowadzi stałe działania dążące do doszkalania naszych pracowników oraz prowadzi efektywną współpracę naukową z autorytetami ze świata nauki. Wszystko po to, aby zapewnić naszemu klientowi pewny produkt -najwyższej jakości (wychodzący naprzeciw potrzebom i oczekiwaniom).
-              <br><br>
-              Powyższe cele realizujemy we współpracy ze środowiskiem naukowym i farmaceutycznym.
-            </p>
-          </div>
-        </div>
-        <div class="text-img-block slide-up reverse scroll-detect" id="idea-block">
-          <div class="img-box">
-            <img src="./images/rd-dzial/idea.png" alt="Osiągnięcia">
-          </div>
-          <div class="text-box">
-            <h4 class="title">Osiągnięcia</h4>
-            <p class="text">
-              W celu zagwarantowania najwyższej jakości oferty cały proces produkcji podlega ścisłej kontroli, a próbki suplementów i produktów specjalnego przeznaczenia poddawane są szeregowi badań i analiz. Zlecamy m.in. badania mikrobiologiczne, wielopierścieniowych węglowodorów aromatycznych (WWA), sprawdzamy parametry fizyko-chemiczne produktów i kontrolujemy je pod kątem obecności metali ciężkich. Dodatkowo na bieżąco monitorujemy warunki przechowywania oraz transportu, tak by całość procesu była zgodna z wymogami technologicznymi właściwymi dla konkretnego produktu. Wszystko w celu zachowania jego wysokiej jakości, powtarzalności, skuteczności działania i bezpieczeństwa stosowania.
-            </p>
+        <div class="search-navigation-wrapper">
+          <div class="search-navigation">
+            <div class="arrow arrow-left search-nav-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24">
+                <g id="Polygon_2" data-name="Polygon 2" transform="translate(0 24) rotate(-90)" fill="none">
+                  <path d="M12,0,24,21H0Z" stroke="none"/>
+                  <path d="M 12 10.07782459259033 L 8.615900039672852 16 L 15.38409996032715 16 L 12 10.07782459259033 M 12 0 L 24 21 L 0 21 L 12 0 Z" stroke="none" fill="#fff"/>
+                </g>
+              </svg>              
+            </div>
+            <ul class="page-numbers">
+              <li class="page-number search-nav-item active">1</li>
+              <li class="page-number search-nav-item">2</li>
+              <li class="page-number search-nav-item">3</li>
+            </ul>
+            <div class="arrow arrow-right search-nav-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24">
+                <g id="Polygon_16" data-name="Polygon 16" transform="translate(21) rotate(90)" fill="none">
+                  <path d="M12,0,24,21H0Z" stroke="none"/>
+                  <path d="M 12 10.07782459259033 L 8.615900039672852 16 L 15.38409996032715 16 L 12 10.07782459259033 M 12 0 L 24 21 L 0 21 L 12 0 Z" stroke="none" fill="#dbdbdb"/>
+                </g>
+              </svg>              
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <section class="resources-section">
-    <div class="container">
-      <ul class="resources-list slide-up">
-        <li class="resource">
-          <a href="#" class="link" download>
-            <div class="pdf-icon">
-              <div class="capture">Pdf</div>
-              <div class="download-icon">
-                <img src="./images/icons/download-icon.svg" alt="Download">
-              </div>
-            </div>
-            <div class="text">
-              <span class="filename">Komarko 18 RA HACCP Certificates pl</span>
-              <span class="file-size">2mb</span>
-            </div>
-          </a>
-        </li>
-        <li class="resource">
-          <a href="#" class="link" download>
-            <div class="pdf-icon">
-              <div class="capture">Pdf</div>
-              <div class="download-icon">
-                <img src="./images/icons/download-icon.svg" alt="Download">
-              </div>
-            </div>
-            <div class="text">
-              <span class="filename">Komarko 18 RA HACCP Certificates en</span>
-              <span class="file-size">2mb</span>
-            </div>
-          </a>
-        </li>
-        <li class="resource">
-          <a href="#" class="link" download>
-            <div class="pdf-icon">
-              <div class="capture">Pdf</div>
-              <div class="download-icon">
-                <img src="./images/icons/download-icon.svg" alt="Download">
-              </div>
-            </div>
-            <div class="text">
-              <span class="filename">Polityka jakości KOMARKO</span>
-              <span class="file-size">2mb</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
   <footer class="footer page-footer">
     <div class="container">
       <div class="footer-heading">
@@ -424,7 +332,6 @@
     <img src="./images/logos/post-footer.png" alt="">
   </div>
   <script src="./js/main.js"></script>
-  <script src="./js/shapeParalax.js"></script>
-  <script src="./js/sectionsNavigation.js"></script>
+  <script src="./js/search-page.js"></script>
 </body>
 </html>

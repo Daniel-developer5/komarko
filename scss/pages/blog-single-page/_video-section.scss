@@ -1,0 +1,39 @@
+.video-section {
+  padding: 128px 64px 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px 0;
+  }
+
+  .video-wrapper {
+    margin-bottom: 104px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 40px;
+    }
+
+    iframe, video {
+      width: 100%;
+      border-radius: 25px;
+
+      @media (max-width: $breakpoint-laptop) {
+        max-height: 300px;
+      }
+    }
+  }
+
+  .video-description {
+    max-width: 780px;
+    margin: 0 auto;
+    color: $color-black;
+
+    .title {
+      @extend %text-h4;
+      margin-bottom: 30px;
+    }
+
+    .text {
+      @extend %text-body-small;
+    }
+  }
+}

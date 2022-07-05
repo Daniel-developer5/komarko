@@ -1,0 +1,85 @@
+@import 'post-first-section';
+@import 'video-section';
+
+.blog-single-page {
+  position: relative;
+
+  .text-img-blocks {
+    padding: 0 64px;
+    display: grid;
+    gap: 90px;
+
+    @media (max-width: $breakpoint-tablet) {
+      gap: 40px;
+      padding: 0 16px;
+    }
+  }
+
+  .last-section {
+    @include activate-border-animation();
+    padding: 0 64px 80px;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0 16px 40px;
+    }
+
+    .button-box {
+      @extend %horizontal-center;
+      margin-top: 60px;
+
+      @media (max-width: $breakpoint-laptop) {
+        margin-top: 36px;
+      }
+    }
+
+    .border-slide-animation {
+      @include border-slide-animation();
+      height: 80px;
+      width: 100%;
+      border-right: 2px solid $color-blue;
+      border-radius: 0 0 25px 25px;
+  
+      @media (max-width: $breakpoint-tablet) {
+        height: 40px;
+        margin-top: 8px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .facebook-embed {
+    display: flex;
+    position: fixed;
+    z-index: 30;
+    transition: ease 0.5s;
+    transform: translateX(calc(-100% + 42px));
+
+    &:hover {
+      transform: translateX(0)
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      top: 100px;
+    }
+
+    .embed-button {
+      @extend %full-center;
+      width: 42px;
+      height: 52px;
+      background-color: $color-blue;
+      border-radius: 0 40px 40px 0;
+      cursor: pointer;
+    }
+
+    iframe {
+      max-width: 420px;
+      
+      @media (max-width: $breakpoint-tablet) {
+        width: calc(100% - 42px);
+      }
+    }
+  }
+}
