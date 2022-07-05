@@ -1,0 +1,53 @@
+.finish-section {
+  position: relative;
+  padding: 60px 64px 80px;
+  background-color: $color-secondary-sky;
+  z-index: 2;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon(10%);
+  }
+
+  .container {
+    .title-box {
+      margin-bottom: 46px;
+      max-width: 580px;
+
+      .title {
+        @extend %text-h2;
+        color: $color-black;
+        margin-bottom: 46px;
+      }
+
+      .text {
+        @extend %text-subtitle;
+        color: $color-black;
+      }
+    }
+
+    .text-items {
+      display: grid;
+      gap: 100px;
+      margin-bottom: 80px;
+
+      @media (max-width: $breakpoint-tablet) {
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .text-img-block {
+        &.hide {
+          display: none;
+        }
+      }
+    }
+
+    .button-box {
+      @extend %horizontal-center;
+    }
+  }
+}

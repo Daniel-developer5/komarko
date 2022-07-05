@@ -188,4 +188,14 @@ $(() => {
 
     $('.job-offer-section .tabs-content').css('min-height', currentTab.height())
   })
+
+  $('.load-more-companies').click(function () {
+    $('.finish-section .text-img-block').removeClass('hide')
+  
+    setTimeout(() => {
+      $('.finish-section .text-img-block').addClass('animated')
+    }, 100)
+
+    $(this).remove()
+  })
 })

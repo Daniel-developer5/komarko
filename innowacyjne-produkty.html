@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <title>Komarko</title>
+</head>
+<body>
+  <header class="navigation light">
+    <div class="container xl">
+      <div class="logo">
+        <a href="/">
+          <img class="desktop" src="./images/logos/white-logo.svg" alt="Komarko">
+          <img class="mobile" src="./images/logos/colored-logo.svg" alt="Komarko">
+        </a>
+        <p class="text">
+          twój partner w produkcji kontraktowej
+        </p>
+      </div>
+      <ul class="navigation-links">
+        <li class="navigation-link">
+          <a href="/o-nas.html">O nas</a>
+        </li>
+        <li class="navigation-link dropdown-trigger">
+          <a href="#">R & D</a>
+          <div class="dropdown">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9">
+                <path id="Polygon_14" data-name="Polygon 14" d="M5,0l5,9H0Z" fill="#fff"/>
+              </svg>              
+            </div>
+            <div class="links">
+              <a href="./dzial-badawczo-rozwjowy.html" class="link">Dział badawczo rozwojowy</a>
+              <a href="#" class="link">Innowacyjne produkty</a>
+            </div>
+            <div class="sub-links">
+              <a href="#">Zakończenie wdrożenia</a>
+              <a href="#">Produkty w opracowaniu</a>
+              <a href="#">Cykle życia produktu</a>
+            </div>
+          </div>
+        </li>
+        <li class="navigation-link">
+          <a href="/oferta.html">Oferta</a>
+        </li>
+        <li class="navigation-link">
+          <a href="/aktualnosci.html">Aktualności</a>
+        </li>
+        <li class="navigation-link">
+          <a href="/kariera.html">Kariera</a>
+        </li>
+        <li class="navigation-link">
+          <a href="/kontakt.html">Kontakt</a>
+        </li>
+        <li class="navigation-link">
+          <a href="#" class="button button-blue">Konfigurator produktu</a>
+        </li>
+      </ul>
+      <div class="additional-buttons">
+        <a href="./search.html" class="search-btn button button-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.639" height="17.634" viewBox="0 0 17.639 17.634">
+            <path id="Path_12" data-name="Path 12" d="M14541.443,9836.052l-2.963-2.962a7.97,7.97,0,1,1,1.609-1.607l2.961,2.959a1.138,1.138,0,0,1-1.607,1.61Zm-13.416-9.339a5.684,5.684,0,0,0,9.631,4.1c.024-.027.046-.054.072-.08a.962.962,0,0,1,.081-.073,5.687,5.687,0,1,0-9.784-3.943Z" transform="translate(-14525.748 -9818.75)" fill="#fff"/>
+          </svg>
+        </a>
+        <button class="login-btn button button-white">Zaloguj</button>
+        <button class="lang-btn">
+          <img src="./images/icons/en-lang.svg" alt="English">
+        </button>
+        <a href="#" class="in-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
+            <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M4.29,19.166H.317V6.37H4.29ZM2.3,4.625A2.312,2.312,0,1,1,4.6,2.3,2.321,2.321,0,0,1,2.3,4.625ZM19.162,19.166H15.2V12.937c0-1.485-.03-3.388-2.066-3.388-2.066,0-2.382,1.613-2.382,3.281v6.336H6.779V6.37H10.59V8.116h.056a4.175,4.175,0,0,1,3.76-2.066c4.021,0,4.761,2.648,4.761,6.088v7.029Z" transform="translate(0 -0.001)" fill="#fff"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger burger-menu-btn hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobile-navigation">
+        <div class="scrollable">
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="/o-nas.html">O nas</a>
+            </li>
+            <li class="navigation-link accordion">
+              <a>R & D</a>
+              <div class="expandable-links">
+                <a href="/dzial-badawczo-rozwjowy.html" class="big-link">Dział badawczo rozwojowy</a>
+                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <div class="small-links">
+                  <a href="#" class="link">Zakończenie wdrożenia</a>
+                  <a href="#" class="link">Produkty w opracowaniu</a>
+                  <a href="#" class="link">Cykle życia produktu</a>
+                </div>
+              </div>
+            </li>
+            <li class="navigation-link">
+              <a href="/oferta.html">Oferta</a>
+            </li>
+            <li class="navigation-link">
+              <a href="/aktualnosci.html">Aktualności</a>
+            </li>
+            <li class="navigation-link">
+              <a href="/kariera.html">Kariera</a>
+            </li>
+            <li class="navigation-link">
+              <a href="#">Konfigurator produktu</a>
+            </li>
+          </ul>
+          <ul class="socials padding">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in-dark.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter-dark.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube-dark.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook-dark.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="additional-buttons padding">
+          <button class="login-btn button button-white mobile-nav">Zaloguj</button>
+          <a href="./search.html" class="search-btn button button-white mobile-nav">
+            <img src="./images/icons/search.svg" alt="search">
+          </a>
+          <button class="lang-btn">
+            <img src="./images/icons/en-lang.svg" alt="English">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="secondary-page-hero innovation-products">
+    <div class="sub-page-banner">
+      <div class="container xl">
+        <div class="text">
+          <a href="/" class="main-page-text">Strona główna</a>
+          <span class="line">/</span>
+          <span class="current-page-text">Innowacyjne produkty</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section-img">
+      <div class="text-box">
+        <a href="#graphic-section" class="white-arrow-down">
+          <img src="./images/icons/white-arrow-down.svg" alt="Down">
+        </a>
+        <div class="container slide-up">
+          <span class="eyebrow">Innowacyjne produkty</span>
+          <h3 class="title">
+            Produkujemy różnorodne typy <br>
+            <span class="text-bold underlined-text">produktów</span>
+          </h3>
+          <p class="text">
+            Oferujemy bardzo szeroki zakres produktów, typów opakowań, oparte na zastosowaniu najnowszych technologii oraz stabilnych standardach realizacji współpracy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="sections-navigation-trigger">
+    <div class="sections-navigation">
+      <div class="container">
+        <div class="arrow">
+          <img src="./images/icons/white-arrow-right.svg" alt="">
+        </div>
+        <ul class="links">
+          <li>
+            <a href="#finish-section" class="link active">Zakończenie wdrożenia</a>
+          </li>
+          <li>
+            <a href="#packing-section" class="link">Produkty w opracowaniu</a>
+          </li>
+          <li>
+            <a href="#cycle-section" class="link">Cykle życia produkt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="finish-section scroll-detect" id="finish-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <div class="title-box slide-up">
+        <h2 class="title">Zakończenie wdrożenia</h2>
+        <p class="text">
+          W ramach prowadzonej działalności wprowadziliśmy na rynek produkty, który były efektem współpracy z poniższymi firmami:
+        </p>
+      </div>
+      <div class="text-items">
+        <div class="text-img-block slide-up">
+          <div class="img-box">
+            <img src="./images/innovation-products/firma-1.png" alt="Nazwa firmy">
+          </div>
+          <div class="text-box">
+            <h4 class="title">Nazwa firmy</h4>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut erat quis metus luctus congue. Morbi quis viverra sem, maximus consequat dui. Integer ut nunc sagittis, vestibulum mauris nec, semper diam. Mauris velit justo, blandit at justo nec, ultricies bibendum sem. Proin lobortis arcu at magna dapibus, eget laoreet purus ullamcorper. Mauris porttitor ut nibh ut tincidunt. Suspendisse nec condimentum risus. In mauris enim, 
+            </p>
+          </div>
+        </div>
+        <div class="text-img-block slide-up reverse">
+          <div class="img-box">
+            <img src="./images/innovation-products/firma-2.png" alt="Nazwa firmy">
+          </div>
+          <div class="text-box">
+            <h4 class="title">Nazwa firmy</h4>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut erat quis metus luctus congue. Morbi quis viverra sem, maximus consequat dui. Integer ut nunc sagittis, vestibulum mauris nec, semper diam. Mauris velit justo, blandit at justo nec, ultricies bibendum sem. Proin lobortis arcu at magna dapibus, eget laoreet purus ullamcorper. Mauris porttitor ut nibh ut tincidunt. Suspendisse nec condimentum risus. In mauris enim, 
+            </p>
+          </div>
+        </div>
+        <div class="text-img-block slide-up hide">
+          <div class="img-box">
+            <img src="./images/innovation-products/firma-1.png" alt="Nazwa firmy">
+          </div>
+          <div class="text-box">
+            <h4 class="title">Nazwa firmy</h4>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut erat quis metus luctus congue. Morbi quis viverra sem, maximus consequat dui. Integer ut nunc sagittis, vestibulum mauris nec, semper diam. Mauris velit justo, blandit at justo nec, ultricies bibendum sem. Proin lobortis arcu at magna dapibus, eget laoreet purus ullamcorper. Mauris porttitor ut nibh ut tincidunt. Suspendisse nec condimentum risus. In mauris enim, 
+            </p>
+          </div>
+        </div>
+        <div class="text-img-block slide-up reverse hide">
+          <div class="img-box">
+            <img src="./images/innovation-products/firma-2.png" alt="Nazwa firmy">
+          </div>
+          <div class="text-box">
+            <h4 class="title">Nazwa firmy</h4>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut erat quis metus luctus congue. Morbi quis viverra sem, maximus consequat dui. Integer ut nunc sagittis, vestibulum mauris nec, semper diam. Mauris velit justo, blandit at justo nec, ultricies bibendum sem. Proin lobortis arcu at magna dapibus, eget laoreet purus ullamcorper. Mauris porttitor ut nibh ut tincidunt. Suspendisse nec condimentum risus. In mauris enim, 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="button-box">
+        <button class="button button-blue load-more-companies">Zaladuj więcej</button>
+      </div>
+    </div>
+  </div>
+  <div class="process-section scroll-detect scroll-animation" id="packing-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <h2 class="title slide-up">Produkty w opracowaniu</h2>
+      <div class="text-box slide-up">
+        <h4 class="title">
+          Celem opracowywania nowych produktów przez zespół naszych specjalistów jest stworzenie receptur, które najlepiej odpowiadają potrzebom klienta. 
+        </h4>
+        <p class="text">
+          Podstawę bazową opracowywania nowych produktów stanowi nasz zespół specjalistów z ożarowa mazowieckiego. Zajmujemy się tam opracowywaniem produktów w postaci form: płynnych i suchych). W celu poznania naszych nowych produktów polecamy obserwowanie naszej strony www (zakładka: aktualności), a także prowadzonych przez nas firmowych kont social media. 
+        </p>
+        <div class="button-box">
+          <a href="#" class="button button-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15.461" height="15.461" viewBox="0 0 15.461 15.461">
+              <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M3.461,15.461H.255V5.139H3.461s0,3.483,0,6.064S3.461,15.461,3.461,15.461Zm-1.6-11.73A1.865,1.865,0,1,1,3.713,1.857,1.872,1.872,0,0,1,1.856,3.731Zm13.6,11.73h-3.2V10.436c0-1.2-.024-2.733-1.667-2.733C8.926,7.7,8.671,9,8.671,10.35v5.111h-3.2V5.139H8.543V6.547h.045A3.368,3.368,0,0,1,11.621,4.88c3.244,0,3.84,2.136,3.84,4.911v5.67Z" transform="translate(0 -0.001)" fill="#fff"/>
+            </svg>            
+            Komarko linkedin
+          </a>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="./images/innovation-products/process.jpg" alt="">
+      </div>
+      <div class="border-slide-animation"></div>
+    </div>
+  </div>
+  <footer class="footer page-footer">
+    <div class="container">
+      <div class="footer-heading">
+        <div class="logo">
+          <img src="./images/logos/white-logo.svg" alt="Komarko">
+        </div>
+        <div class="buttons">
+          <button class="button button-white">Konfigurator produktu</button>
+          <button class="button button-white">Zaloguj</button>
+        </div>
+      </div>
+      <div class="footer-information">
+        <div class="links">
+          <ul class="links-list">
+            <li class="link title margin-bottom">O nas</li>
+            <li class="link"><a href="/o-nas.html#history-section">Historia</a></li>
+            <li class="link"><a href="/o-nas.html#mission-section">Misja</a></li>
+            <li class="link margin-bottom"><a href="/o-nas.html#aims-section">Cele</a></li>
+            <li class="link title"><a href="/oferta.html">Oferta</a></li>
+            <li class="link title"><a href="/aktualnosci.html">Aktualności</a></li>
+            <li class="link title"><a href="/kariera.html">Kariera</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">R & D</li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Projekty Badawcze</a></li>
+            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="#">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
+            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
+            <li class="link"><a href="#">Lokale</a></li>
+            <li class="link"><a href="#">Działki</a></li>
+          </ul>
+          <ul class="links-list">
+            <li class="link title margin-bottom">Usługi</li>
+            <li class="link"><a href="#">Proszk</a></li>
+            <li class="link"><a href="#">Granulaty</a></li>
+            <li class="link"><a href="#">Mikrogranulaty</a></li>
+            <li class="link"><a href="#">Tabletki</a></li>
+            <li class="link"><a href="#">Kapsułki</a></li>
+            <li class="link"><a href="#">Saszetki</a></li>
+            <li class="link"><a href="#">Konfekcja</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <span class="link title margin-bottom">Kontakt</span>
+          <p class="text">
+            KOMARKO Sp. z o.o.
+            <br>
+            05-850 Ożarów Mazowiecki
+            <br>
+            ul. Kierbedzia 8
+            <br>
+            skrytka pocztowa nr 68
+          </p>
+          <p class="text">
+            +48 22 722 42 56
+            <br>
+            +48 22 722 38 89
+            <br>
+            komarko@komarko.pl
+          </p>
+          <ul class="socials">
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/in.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/twitter.svg" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/youtube.svg" alt="YouTube">
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="#">
+                <img src="./images/icons/socials/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="post-footer">
+    <img src="./images/logos/post-footer.png" alt="">
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/shapeParalax.js"></script>
+  <script src="./js/sectionsNavigation.js"></script>
+</body>
+</html>

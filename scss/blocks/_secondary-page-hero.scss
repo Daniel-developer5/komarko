@@ -104,6 +104,7 @@
   padding: 0 64px;
   background-color: $color-secondary-dark-blue;
   z-index: 100;
+  position: relative;
   overflow-x: auto;
 
   &::-webkit-scrollbar {
