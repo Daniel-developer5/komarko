@@ -169,4 +169,22 @@ $(() => {
 
   $('.home-page-hero').mousemove(moveHeroBg)
   $('header.navigation').mousemove(moveHeroBg)
+
+  let activeSlidePart = 0
+
+  $('.change-tecnology-btn').click(function () {
+    if (activeSlidePart === $(this).index()) {
+      return
+    }
+
+    $('.change-tecnology-btn').removeClass('button-blue')
+    $('.change-tecnology-btn').addClass('button-gray')
+
+    $(this).removeClass('button-gray')
+    $(this).addClass('button-blue')
+    activeSlidePart = $(this).index()
+
+    $('.technology-slider .slide-text').toggleClass('hide')
+    $('.technology-slider .swiper-slide').toggleClass('secondary')
+  })
 })

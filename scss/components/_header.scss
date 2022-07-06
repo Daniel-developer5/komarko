@@ -283,6 +283,14 @@ html.overflow, body.overflow {
         height: 36px;
         overflow: hidden;
         border-radius: 50%;
+
+        &:hover {
+          overflow: visible;
+        }
+
+        img:last-child {
+          margin-top: 8px;
+        }
       }
 
       .in-btn {
@@ -514,6 +522,12 @@ html.overflow, body.overflow {
 
       .lang-btn {
         margin-right: 0;
+
+        img:last-child {
+          transform: translateY(-235%);
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
       }
     }
   }

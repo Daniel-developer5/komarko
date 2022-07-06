@@ -1,0 +1,202 @@
+.cycle-section {
+  @include section-animated-tab(0 0 40px 0, 0, $color-blue, -100%);
+  padding: 85px 64px 148px;
+  position: relative;
+  background-color: $color-secondary-dark-blue;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon(auto, 20%);
+  }
+
+  .container {
+    > .title {
+      @extend %text-h2;
+      color: $color-white;
+    }
+    
+    .rows {
+      width: 100%;
+    }
+
+    .cycle-phase {
+      padding-bottom: 40px;
+      background-color: $color-secondary-dark-blue;
+
+      .number {
+        font-family: 'Rajdhani', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 226px;
+        line-height: 288px;
+        color: $color-white;
+      }
+
+      .text-box {
+        max-width: 180px;
+        margin-top: -50px;
+        margin-left: 50px;
+        position: relative;
+        color: $color-white;
+
+        .shadow-box {
+          @extend %vertical-center;
+          position: absolute;
+          top: -110px;
+          left: -18px;
+          z-index: 0;
+          height: 190px;
+          width: 60px;
+          background-color: $color-secondary-dark-blue;
+          transform: rotate(45deg);
+
+          .shadow {
+            width: 100%;
+            height: 60%;
+            box-shadow: -16px 0 18px rgb(0 0 0 / 9%);
+          }
+
+          &:after {
+            @include full-absolute-bleed;
+            content: '';
+            background-color: $color-secondary-dark-blue;
+          }
+        }
+
+        .title {
+          @extend %text-body-medium;
+          text-transform: uppercase;
+        }
+
+        .text {
+          @extend %text-body-small;
+          margin-top: 20px;
+        }
+
+        .title, .text {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+
+    .life-cycle-desktop {
+      @extend %full-center;
+      position: relative;
+
+      @media (max-width: $breakpoint-laptop) {
+        display: none;
+      }
+
+      &:before {
+        @include full-absolute-bleed(100px);
+        top: 180px;
+        content: '';
+        z-index: 0;
+        border-radius: 470px;
+        border: 4px solid $color-secondary-light-blue;
+      }
+
+      .img-box {
+        position: absolute;
+        padding: 10px;
+        border-radius: 150px;
+        background-color: $color-white;
+        
+        .img-box-mask {
+          width: 270px;
+          height: 613px;
+          -webkit-mask-image: url('../images/masks/vertical-mask.svg');
+          -webkit-mask-size: 100% 100%;
+          -webkit-mask-repeat: no-repeat;
+          mask-image: url('../images/masks/vertical-mask.svg');
+          mask-size: 100% 100%;
+          mask-repeat: no-repeat;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+
+        &:first-child, &:last-child {
+          justify-content: center;
+          margin-bottom: 0;
+
+          .cycle-phase {
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-bottom: 0;
+          }
+        }
+
+        &:nth-child(even) {
+          margin-bottom: 85px;
+
+          .cycle-phase .number {
+            color: $color-blue;
+          }
+        }
+      }
+    }
+
+    .life-cycle-mobile {
+      display: none;
+
+      @media (max-width: $breakpoint-laptop) {
+        display: block;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        margin-bottom: 40px;
+
+        @media (max-width: $breakpoint-tablet) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .cycle-phase {
+          padding-bottom: 0;
+          justify-self: center;
+
+          &:nth-child(even) {
+            .number {
+              color: $color-secondary-light-blue;
+            }
+          }
+
+          
+        }
+      }
+
+      .img-box {
+        img {
+          width: 100%;
+          -webkit-mask-image: url('../images/masks/drop-mask.svg');
+          -webkit-mask-size: 100% 100%;
+          -webkit-mask-repeat: no-repeat;
+          mask-image: url('../images/masks/drop-mask.svg');
+          mask-size: 100% 100%;
+          mask-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

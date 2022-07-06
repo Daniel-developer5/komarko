@@ -1,0 +1,238 @@
+.infographic-section {
+  position: relative;
+  z-index: 3;
+  padding: 54px 64px 135px;
+  background-color: #fff;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 16px;
+  }
+
+  .shape-paralax-item {
+    @include shape-paralax-pentagon();
+  }
+
+  .container {
+    .title {
+      @extend %text-h2;
+      margin-bottom: 30px;
+      color: $color-black;
+    }
+
+    .buttons {
+      display: inline-grid;
+      gap: 20px;
+      grid-auto-flow: column;
+      margin-bottom: 70px;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 40px;
+        grid-auto-flow: row;
+      }
+    }
+
+    .infographics {
+      .infographic {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .infographic-1 {
+        display: flex;
+        position: relative;
+
+        @media (max-width: 1200px) {
+          flex-direction: column;
+
+          .line, *:after {
+            display: none;
+          }
+        }
+
+        .circle {
+          @extend %full-center;
+          flex-direction: column;
+          border-radius: 50%;
+
+          > img {
+            max-width: 38px;
+            display: block;
+            margin-bottom: 12px;
+          }
+
+          .capture {
+            @extend %text-button;
+            color: $color-white;
+          }
+        }
+
+        .start-item {
+          @extend %vertical-center;
+          padding-right: 20px;
+          position: relative;
+
+          @media (max-width: 1200px) {
+            justify-content: center;
+            padding-right: 0;
+            padding-bottom: 20px;
+          }
+
+          .circle {
+            position: relative;
+            z-index: 1;
+            width: 180px;
+            height: 180px;
+            background-color: $color-blue;
+          }
+
+          &:after {
+            content: '';
+            width: 50%;
+            position: absolute;
+            top: 72px;
+            bottom: 72px;
+            right: 0;
+            z-index: 0;
+            border: 3px solid $color-blue;
+            border-right: none;
+            border-radius: 25px 0 0 25px;
+          }
+        }
+
+        .text {
+          @extend %text-body-small;
+          max-width: 420px;
+          padding: 24px 44px 44px;
+          border-radius: 18px;
+          color: $color-white;
+          text-align: center;
+
+          &.mobile {
+            display: none;
+
+            @media (max-width: 1200px) {
+              display: block;
+            }
+          }
+
+          &.blue {
+            background-color: $color-blue;
+          }
+
+          &.purple {
+            background-color: $color-purple;
+          }
+
+          @media (max-width: 1200px) {
+            max-width: 100%;
+            
+            &.first {
+              margin-top: 40px;
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        .branches {
+          flex-grow: 1;
+
+          @media (max-width: 1200px) {
+            display: flex;
+            justify-content: center;
+
+            .text {
+              display: none;
+            }
+          }
+
+          .circle {
+            width: 148px;
+            height: 148px;
+            background-color: $color-purple;
+            position: relative;
+
+            .line {
+              width: 240px;
+              height: 0;
+              position: absolute;
+              right: -240px;
+              z-index: -1;
+              border-top: 3px solid $color-blue;
+
+              > img {
+                position: absolute;
+                top: -12px;
+                left: 80px;
+              }
+            }
+          }
+
+          .branch {
+            @extend %vertical-center;
+
+            @media (max-width: 1200px) {
+              flex-direction: column;
+            }
+
+            &.first-branch {
+              margin-bottom: 132px;
+
+              @media (max-width: 1200px) {
+                margin-bottom: 0;
+                margin-right: 40px;
+              }
+
+              .circle {
+                margin-right: 123px;
+
+                @media (max-width: 1200px) {
+                  margin-right: 0;
+                }
+              }
+
+              .text {
+                background-color: $color-purple;
+              }
+            }
+
+            &.second-branch {
+              justify-content: space-between;
+
+              .text {
+                position: relative;
+                background-color: $color-blue;
+
+                .line {
+                  bottom: 50%;
+                  z-index: -1;
+                }
+              }
+
+              .circle .line .inner-line, .text .line {
+                position: absolute;
+                height: 300px;
+                width: 0;
+                border-left: 3px solid $color-blue;
+
+                &:after {
+                  content: url('../images/innovation-products/graphic/arrow.svg');
+                  display: block;
+                  position: absolute;
+                  bottom: 120px;
+                  left: -8px;
+                  transform: rotate(-90deg);
+                }
+              }
+
+              .circle .line .inner-line {
+                right: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -198,4 +198,34 @@ $(() => {
 
     $(this).remove()
   })
+
+  $('.change-infographic-btn').click(function () {
+    const graphics = $('.infographics .infographic')
+    
+    graphics.addClass('hide')
+    graphics.eq($(this).index()).removeClass('hide')
+
+    $('.change-infographic-btn').removeClass('button-blue')
+    $('.change-infographic-btn').addClass('button-gray')
+
+    $(this).removeClass('button-gray')
+    $(this).addClass('button-blue')
+  })
+
+  let activeLang = 'en'
+
+  const onChangeLang = () => {
+    $('.change-lang').click(function () {
+      if (activeLang === $(this).data('lang')) {
+        return
+      }
+      
+      const langBtn = $(this).closest('.lang-btn')
+      langBtn.html([...langBtn.children()].reverse())
+      activeLang = $(this).data('lang')
+      onChangeLang()
+    })
+  }
+
+  onChangeLang()
 })

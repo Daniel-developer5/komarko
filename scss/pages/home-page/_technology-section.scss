@@ -120,6 +120,22 @@
           background-image: url('../images/tech-slider/slide-2.jpg');
         }
 
+        &.slide-1.secondary .img-box {
+          background-image: url('../images/tech-slider/slide-sec-1.jpg');
+        }
+  
+        &.slide-2.secondary .img-box {
+          background-image: url('../images/tech-slider/slide-sec-2.jpg');
+        }
+  
+        &.slide-3.secondary .img-box {
+          background-image: url('../images/tech-slider/slide-sec-3.jpg');
+        }
+  
+        &.slide-4.secondary .img-box {
+          background-image: url('../images/tech-slider/slide-sec-2.jpg');
+        }
+
         .slide-content {
           width: 100%;
           display: flex;
@@ -151,6 +167,10 @@
             color: $color-black;
             text-align: center;
             transition: ease 0.5s;
+
+            &.hide {
+              display: none;
+            }
           }
         }
       }

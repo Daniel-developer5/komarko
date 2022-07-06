@@ -43,12 +43,12 @@
             </div>
             <div class="links">
               <a href="./dzial-badawczo-rozwjowy.html" class="link">Dział badawczo rozwojowy</a>
-              <a href="#" class="link">Innowacyjne produkty</a>
+              <a href="./innowacyjne-produkty.html" class="link">Innowacyjne produkty</a>
             </div>
             <div class="sub-links">
-              <a href="#">Zakończenie wdrożenia</a>
-              <a href="#">Produkty w opracowaniu</a>
-              <a href="#">Cykle życia produktu</a>
+              <a href="./innowacyjne-produkty.html#finish-section">Zakończenie wdrożenia</a>
+              <a href="./innowacyjne-produkty.html#packing-section">Produkty w opracowaniu</a>
+              <a href="./innowacyjne-produkty.html#cycle-section">Cykle życia produktu</a>
             </div>
           </div>
         </li>
@@ -76,7 +76,8 @@
         </a>
         <button class="login-btn button button-white">Zaloguj</button>
         <button class="lang-btn">
-          <img src="./images/icons/en-lang.svg" alt="English">
+          <img src="./images/icons/en-lang.svg" alt="English" class="change-lang" data-lang="en">
+          <img src="./images/icons/pl.svg" alt="Polish" class="change-lang" data-lang="pl">
         </button>
         <a href="#" class="in-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="19.166" height="19.166" viewBox="0 0 19.166 19.166">
@@ -99,11 +100,11 @@
               <a>R & D</a>
               <div class="expandable-links">
                 <a href="/dzial-badawczo-rozwjowy.html" class="big-link">Dział badawczo rozwojowy</a>
-                <a href="#" class="big-link">Innowacyjne produkty</a>
+                <a href="./innowacyjne-produkty.html" class="big-link">Innowacyjne produkty</a>
                 <div class="small-links">
-                  <a href="#" class="link">Zakończenie wdrożenia</a>
-                  <a href="#" class="link">Produkty w opracowaniu</a>
-                  <a href="#" class="link">Cykle życia produktu</a>
+                  <a href="./innowacyjne-produkty.html#finish-section" class="link">Zakończenie wdrożenia</a>
+                  <a href="./innowacyjne-produkty.html#packing-section" class="link">Produkty w opracowaniu</a>
+                  <a href="./innowacyjne-produkty.html#cycle-section" class="link">Cykle życia produktu</a>
                 </div>
               </div>
             </li>
@@ -149,7 +150,8 @@
             <img src="./images/icons/search.svg" alt="search">
           </a>
           <button class="lang-btn">
-            <img src="./images/icons/en-lang.svg" alt="English">
+            <img src="./images/icons/en-lang.svg" alt="English" class="change-lang" data-lang="en">
+            <img src="./images/icons/pl.svg" alt="Polish" class="change-lang" data-lang="pl">
           </button>
         </div>
       </div>
@@ -203,6 +205,65 @@
       </div>
     </div>
   </div>
+  <section class="infographic-section" id="graphic-section">
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon.svg" alt="">
+    </div>
+    <div class="container">
+      <h2 class="title slide-up">Lorem ipsum dolor</h2>
+      <div class="buttons slide-up">
+        <button class="button button-blue change-infographic-btn">Formy Płynne</button>
+        <button class="button button-gray change-infographic-btn">Formy Suche</button>
+      </div>
+      <div class="infographics slide-up">
+        <div class="infographic-1 infographic">
+          <div class="start-item">
+            <div class="circle">
+              <img src="./images/innovation-products/graphic/bottle.svg" alt="Formy Płynne">
+              <span class="capture">Formy Płynne</span>
+            </div>
+          </div>
+          <div class="branches">
+            <div class="first-branch branch">
+              <div class="circle">
+                <img src="./images/innovation-products/graphic/drops.svg" alt="krople">
+                <span class="capture">krople</span>
+                <div class="line">
+                  <img src="./images/innovation-products/graphic/arrow.svg" alt="">
+                </div>
+              </div>
+              <div class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh.
+              </div>
+            </div>
+            <div class="second-branch branch">
+              <div class="circle">
+                <img src="./images/innovation-products/graphic/fire.svg" alt="roztwory">
+                <span class="capture">roztwory</span>
+                <div class="line">
+                  <img src="./images/innovation-products/graphic/arrow.svg" alt="">
+                  <div class="inner-line"></div>
+                </div>
+              </div>
+              <div class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh.
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+          <div class="text mobile blue first">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh.
+          </div>
+          <div class="text mobile purple">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis ex, at sagittis quam commodo ut. Pellentesque eget fringilla leo. Vivamus lobortis sem non tellus faucibus dapibus. Morbi non felis nibh.
+          </div>
+        </div>
+        <div class="infographic-2 infographic hide">
+          infographic 2
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="finish-section scroll-detect" id="finish-section">
     <div class="shape-paralax-item">
       <img src="./images/icons/pentagon.svg" alt="">
@@ -293,6 +354,179 @@
       <div class="border-slide-animation"></div>
     </div>
   </div>
+  <section class="cycle-section scroll-detect scroll-animation" id="cycle-section">
+    <div class="animated-tab"></div>
+    <div class="shape-paralax-item">
+      <img src="./images/icons/pentagon-white.svg" alt="">
+    </div>
+    <div class="container">
+      <h2 class="title slide-up">Cykl życia produktów</h2>
+      <div class="life-cycle-desktop">
+        <div class="img-box slide-up">
+          <div class="img-box-mask">
+            <img src="./images/innovation-products/pills.png" alt="">
+          </div>
+        </div>
+        <div class="rows">
+          <div class="row slide-up">
+            <div class="cycle-phase">
+              <div class="number">1</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">Faza Badawcza</span>
+                <p class="text">
+                  Możliwość opracowania koncepcji produktu w oparciu o konkretnych potrzebach I celac
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row slide-up">
+            <div class="cycle-phase">
+              <div class="number">6</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">procesy rejestracyjne</span>
+                <p class="text">
+                  Udostępnianie dokumentacji produkcyjnej.
+                </p>
+              </div>
+            </div>
+            <div class="cycle-phase">
+              <div class="number">2</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">kontrola jakości i badania</span>
+              </div>
+            </div>
+          </div>
+          <div class="row slide-up">
+            <div class="cycle-phase">
+              <div class="number">5</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">pakowanie i logistyka</span>
+                <p class="text">
+                  Cykl obiegu dystrybucji.
+                </p>
+              </div>
+            </div>
+            <div class="cycle-phase">
+              <div class="number">3</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">produkcja</span>
+                <p class="text">
+                  Produkcja półproduktów I produktów gotowych <br>
+                  Wytwarzanie produktów w zgodzie ze standardami jakośc
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row slide-up">
+            <div class="cycle-phase">
+              <div class="number">4</div>
+              <div class="text-box">
+                <div class="shadow-box">
+                  <div class="shadow"></div>
+                </div>
+                <span class="title">projektowanie etykiet i opakowań</span>
+                <p class="text">
+                  Kreowanie wizerunku produktu I marki.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="life-cycle-mobile">
+        <div class="steps">
+          <div class="cycle-phase">
+            <div class="number">1</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">Faza Badawcza</span>
+              <p class="text">
+                Możliwość opracowania koncepcji produktu w oparciu o konkretnych potrzebach I celac
+              </p>
+            </div>
+          </div>
+          <div class="cycle-phase">
+            <div class="number">2</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">kontrola jakości i badania</span>
+            </div>
+          </div>
+          <div class="cycle-phase">
+            <div class="number">3</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">produkcja</span>
+              <p class="text">
+                Produkcja półproduktów I produktów gotowych <br>
+                Wytwarzanie produktów w zgodzie ze standardami jakośc
+              </p>
+            </div>
+          </div>
+          <div class="cycle-phase">
+            <div class="number">4</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">projektowanie etykiet i opakowań</span>
+              <p class="text">
+                Kreowanie wizerunku produktu I marki.
+              </p>
+            </div>
+          </div>
+          <div class="cycle-phase">
+            <div class="number">5</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">pakowanie i logistyka</span>
+              <p class="text">
+                Cykl obiegu dystrybucji.
+              </p>
+            </div>
+          </div>
+          <div class="cycle-phase">
+            <div class="number">6</div>
+            <div class="text-box">
+              <div class="shadow-box">
+                <div class="shadow"></div>
+              </div>
+              <span class="title">procesy rejestracyjne</span>
+              <p class="text">
+                Udostępnianie dokumentacji produkcyjnej.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="./images/innovation-products/pills.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer page-footer">
     <div class="container">
       <div class="footer-heading">
@@ -317,17 +551,15 @@
           </ul>
           <ul class="links-list">
             <li class="link title margin-bottom">R & D</li>
-            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
-            <li class="link"><a href="#">Projekty Badawcze</a></li>
-            <li class="link"><a href="#">Infrastruktura Badawcza</a></li>
-            <li class="link"><a href="#">Kadra Naukowa</a></li>
-            <li class="link margin-bottom"><a href="#">Osiągniecia</a></li>
-            <li class="link small-title"><a href="#">Dział badawczo rozwojowy</a></li>
-            <li class="link"><a href="#">Zakończenie Wdrożenia</a></li>
-            <li class="link"><a href="#">Produkty w Opracowaniu</a></li>
-            <li class="link"><a href="#">Cykle Życia Produktu</a></li>
-            <li class="link"><a href="#">Lokale</a></li>
-            <li class="link"><a href="#">Działki</a></li>
+            <li class="link small-title"><a href="./dzial-badawczo-rozwjowy.html">Dział badawczo rozwojowy</a></li>
+            <li class="link"><a href="./dzial-badawczo-rozwjowy.html#deals-section">Projekty Badawcze</a></li>
+            <li class="link"><a href="./dzial-badawczo-rozwjowy.html#infrastructure-block">Infrastruktura Badawcza</a></li>
+            <li class="link"><a href="./dzial-badawczo-rozwjowy.html#science-block">Kadra Naukowa</a></li>
+            <li class="link margin-bottom"><a href="./dzial-badawczo-rozwjowy.html#idea-block">Osiągniecia</a></li>
+            <li class="link small-title"><a href="./innowacyjne-produkty.html">Innowacyjne produkty</a></li>
+            <li class="link"><a href="./innowacyjne-produkty.html#finish-section">Zakończenie Wdrożenia</a></li>
+            <li class="link"><a href="./innowacyjne-produkty.html#packing-section">Produkty w Opracowaniu</a></li>
+            <li class="link"><a href="./innowacyjne-produkty.html#cycle-section">Cykle Życia Produktu</a></li>
           </ul>
           <ul class="links-list">
             <li class="link title margin-bottom">Usługi</li>
