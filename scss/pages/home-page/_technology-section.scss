@@ -151,6 +151,27 @@
             background-position: 0 50%;
             overflow: hidden;
             transition: clip-path ease 0.5s;
+            animation: slide-appear 0.5s ease 0.5s forwards;
+            transform: translateY(40px);
+            opacity: 0;
+
+            &.hide {
+              display: none;
+              animation: none;
+              opacity: 1;
+              transform: none;
+            }
+    
+            @keyframes slide-appear {
+              from {
+                transform: translateY(40px);
+                opacity: 0;
+              }
+              to {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
 
             img {
               width: 100%;
@@ -167,9 +188,22 @@
             color: $color-black;
             text-align: center;
             transition: ease 0.5s;
+            animation: text-appear 0.5s ease 0.5s forwards;
+            opacity: 0;
 
             &.hide {
               display: none;
+              animation: none;
+              opacity: 1;
+            }
+
+            @keyframes text-appear {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
             }
           }
         }

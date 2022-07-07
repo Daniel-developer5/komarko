@@ -186,5 +186,6 @@ $(() => {
 
     $('.technology-slider .slide-text').toggleClass('hide')
     $('.technology-slider .swiper-slide').toggleClass('secondary')
+    $('.technology-slider .swiper-slide .img-box').toggleClass('hide')
   })
 })
