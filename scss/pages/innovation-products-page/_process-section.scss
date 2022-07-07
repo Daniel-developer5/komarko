@@ -17,12 +17,8 @@
     width: 50%;
     margin-left: auto;
 
-    &:after {
-      bottom: -4px;
-    }
-
     &:before {
-      height: 105%;
+      top: 1px;
     }
 
     @media (max-width: $breakpoint-tablet) {
