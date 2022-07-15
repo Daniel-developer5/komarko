@@ -228,4 +228,15 @@ $(() => {
   }
 
   onChangeLang()
+
+  $('.fixed-side-panel').addClass('closed')
+
+  $('.fixed-side-panel a').click(function (e) {
+    const panel = $(this).closest('.fixed-side-panel')
+    
+    if (window.innerWidth < 992 && panel.hasClass('closed')) {
+      e.preventDefault()
+      panel.removeClass('closed')
+    }
+  })
 })
