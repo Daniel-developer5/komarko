@@ -11,6 +11,13 @@ $(() => {
       el: '.home-page-hero .slider-dots',
       clickable: true,
     },
+    on: {
+      slideChangeTransitionStart({ realIndex }) {
+        const titles = $('.home-page-hero .text .title')
+        titles.addClass('hide')
+        titles.eq(realIndex).removeClass('hide')
+      },
+    },
   })
 
   const buildSlides = (slides, sliderElement, changeBorderSize) => {

@@ -74,6 +74,7 @@
 
     .text {
       margin-left: 10%;
+      position: relative;
 
       @media (max-width: $breakpoint-laptop) {
         margin-left: 0;
@@ -83,6 +84,16 @@
         @extend %text-h1;
         margin-bottom: 25px;
         max-width: 835px;
+
+        &:not(:first-child) {
+          position: absolute;
+          top: 0;
+          transition: ease 0.5s;
+        }
+
+        &.hide {
+          opacity: 0;
+        }
 
         .blue-text {
           display: block;
