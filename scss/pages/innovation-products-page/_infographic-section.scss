@@ -233,6 +233,22 @@
           }
         }
       }
+
+      .infographic-2 {
+        .mobile {
+          display: none;
+
+          @media (max-width: $breakpoint-laptop) {
+            display: block;
+          }
+        }
+
+        .desktop {
+          @media (max-width: $breakpoint-laptop) {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
