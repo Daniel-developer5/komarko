@@ -239,4 +239,13 @@ $(() => {
       panel.removeClass('closed')
     }
   })
+
+  $('.cookie-banner .close-btn').click(() => {
+    $('.cookie-banner').removeClass('open')
+    window.localStorage.setItem('cookie-confirmation', true)
+  })
+
+  if (!JSON.parse(window.localStorage.getItem('cookie-confirmation'))) {
+    $('.cookie-banner').addClass('open')
+  }
 })

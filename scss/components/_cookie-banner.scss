@@ -1,0 +1,35 @@
+.cookie-banner {
+  display: none;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: rgba($color: $color-white, $alpha: 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid $color-gray;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 16px;
+    padding-bottom: 60px;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  .text {
+    @extend %text-body-small;
+    margin-bottom: 16px;
+    color: $color-black;
+  }
+
+  .text, .button {
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 10px;
+      line-height: 110%;
+    }
+  }
+}

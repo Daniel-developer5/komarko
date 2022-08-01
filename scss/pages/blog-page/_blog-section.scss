@@ -99,7 +99,9 @@
     }
 
     .article .link {
-      display: block;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       padding: 12px 12px 40px;
       border: 4px solid transparent;
       border-radius: 25px;
@@ -116,13 +118,15 @@
 
       .img-box {
         margin-bottom: 24px;
-        border-radius: 25px;
         overflow: hidden;
-
+        flex-grow: 1;
+        
         img {
           width: 100%;
+          height: 100%;
           max-height: 270px;
           object-fit: cover;
+          border-radius: 25px;
         }
       }
 

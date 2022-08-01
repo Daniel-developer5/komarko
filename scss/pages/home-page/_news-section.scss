@@ -82,10 +82,18 @@
           }
 
           .news-img-box {
+            display: flex;
             max-width: 280px;
+            min-height: 270px;
+            max-height: 270px;
             margin-right: 20px;
             border-radius: 25px;
             overflow: hidden;
+
+            img {
+              min-height: 100%;
+              object-fit: cover;
+            }
 
             @media (max-width: $breakpoint-tablet) {
               margin-right: 0;

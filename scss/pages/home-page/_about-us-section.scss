@@ -236,6 +236,7 @@
       .img-box {
         margin-right: 30px;
         position: relative;
+        max-width: 485px;
 
         @media (max-width: $breakpoint-laptop) {
           margin-right: 0;
