@@ -63,6 +63,10 @@
       display: flex;
       justify-content: center;
 
+      &.hide {
+        display: none;
+      }
+
       @media (max-width: $breakpoint-laptop) {
         justify-content: flex-start;
         padding: 0 60px;
@@ -118,22 +122,6 @@
   
         &.slide-4 .img-box {
           background-image: url('../images/tech-slider/slide-2.jpg');
-        }
-
-        &.slide-1.secondary .img-box {
-          background-image: url('../images/tech-slider/slide-sec-1.jpg');
-        }
-  
-        &.slide-2.secondary .img-box {
-          background-image: url('../images/tech-slider/slide-sec-2.jpg');
-        }
-  
-        &.slide-3.secondary .img-box {
-          background-image: url('../images/tech-slider/slide-sec-3.jpg');
-        }
-  
-        &.slide-4.secondary .img-box {
-          background-image: url('../images/tech-slider/slide-sec-2.jpg');
         }
 
         .slide-content {

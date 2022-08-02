@@ -13,7 +13,7 @@ $(() => {
     },
     on: {
       slideChangeTransitionStart({ realIndex }) {
-        const titles = $('.home-page-hero .text .title')
+        const titles = $('.home-page-hero .text')
         titles.addClass('hide')
         titles.eq(realIndex).removeClass('hide')
       },
@@ -21,9 +21,17 @@ $(() => {
   })
 
   const buildSlides = (slides, sliderElement, changeBorderSize) => {
+    if (!slides[0]) {
+      return
+    }
+
     const activeSlideCoef = 0.8
     const height = slides[0].offsetWidth / activeSlideCoef
     
+    if (!height) {
+      return
+    }
+
     slides.forEach(slide => {
       const isActive = $(slide).hasClass(
         window.innerWidth >= 992 ? 'swiper-slide-next' : 'swiper-slide-active'
@@ -51,38 +59,49 @@ $(() => {
     }
   }
 
-  new Swiper('.technology-slider', {
-    slidesPerView: 1,
-    spaceBetween: 24,
-    loop: true,
-    speed: 1000,
-    navigation: {
-      prevEl: '.technology-slider-wrapper .arrow-left',
-      nextEl: '.technology-slider-wrapper .arrow-right',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
+  const techSliders = []
+
+  $('.technology-slider-wrapper').each(function () {
+    const swiper = new Swiper($(this).find('.swiper').get(0), {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      speed: 1000,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        prevEl: $(this).find('.arrow-left').get(0),
+        nextEl: $(this).find('.arrow-right').get(0),
       },
-      992: {
-        slidesPerView: 3,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 48,
+        },
       },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 48,
+      on: {
+        init({ slides, el }) {
+          buildSlides(slides, el, true)
+        },
+        slideChangeTransitionStart({ slides }) {
+          buildSlides(slides)
+        },
+        resize({ slides, el }) {
+          buildSlides(slides, el, true)
+        },
+        update({ slides, el }) {
+          buildSlides(slides, el, true)
+        },
       },
-    },
-    on: {
-      init({ slides, el }) {
-        buildSlides(slides, el, true)
-      },
-      slideChangeTransitionStart({ slides }) {
-        buildSlides(slides)
-      },
-      resize({ slides, el }) {
-        buildSlides(slides, el, true)
-      },
-    },
+    })
+
+    techSliders.push(swiper)
   })
 
   const innovationItems = $('.innovation-section .lists-wrapper .item')
@@ -191,8 +210,7 @@ $(() => {
     $(this).addClass('button-blue')
     activeSlidePart = $(this).index()
 
-    $('.technology-slider .slide-text').toggleClass('hide')
-    $('.technology-slider .swiper-slide').toggleClass('secondary')
-    $('.technology-slider .swiper-slide .img-box').toggleClass('hide')
+    $('.technology-slider-wrapper').toggleClass('hide')
+    techSliders[activeSlidePart].update()
   })
 })

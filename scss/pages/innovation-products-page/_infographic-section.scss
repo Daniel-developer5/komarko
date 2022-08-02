@@ -36,6 +36,10 @@
         &.hide {
           display: none;
         }
+
+        svg {
+          max-width: 100%;
+        }
       }
 
       .infographic-1 {

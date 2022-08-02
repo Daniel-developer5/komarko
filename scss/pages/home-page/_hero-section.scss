@@ -76,6 +76,16 @@
       margin-left: 10%;
       position: relative;
 
+      &:not(:first-child) {
+        position: absolute;
+        transition: ease 0.5s;
+      }
+
+      &.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+
       @media (max-width: $breakpoint-laptop) {
         margin-left: 0;
       }
@@ -85,19 +95,20 @@
         margin-bottom: 25px;
         max-width: 835px;
 
-        &:not(:first-child) {
-          position: absolute;
-          top: 0;
-          transition: ease 0.5s;
-        }
-
-        &.hide {
-          opacity: 0;
-        }
-
         .blue-text {
           display: block;
         }
+      }
+
+      h2 {
+        @extend %text-h2;
+        color: $color-white;
+      }
+
+      h6 {
+        @extend %text-body-medium;
+        margin-bottom: 24px;
+        color: $color-white;
       }
     }
 
