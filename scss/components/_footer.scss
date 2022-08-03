@@ -116,6 +116,10 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 64px;
+  }
+
   img {
     width: 100%;
     max-width: 860px;
